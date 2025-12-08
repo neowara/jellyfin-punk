@@ -1,15 +1,28 @@
 /*Jellyfin-Punk Mono Preset - Black & White with Cyan*/
 /*Minimalist cyberpunk with monochrome palette and subtle cyan accents*/
 
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/jf_font.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fixes.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/base.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/accentlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/rounding.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/smallercast.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/episodelist/episodes_compactlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/header/header_transparent-dashboard.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/login/login_minimalistic.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fields/fields_border.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/cornerindicator/indicator_corner.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_mono.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/titlepage/title_simple.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/overlayprogress.css');
 
-/*Subtle rounding for modern cyberpunk feel*/
-:root {--rounding: 4px;}
+:root {--rounding: 5px;}
 
-/*Style backdrop - minimal blur, desaturated*/
+/*Style backdrop - minimal blur, heavily desaturated*/
 .backdropImage {
-  filter: blur(16px) saturate(20%) contrast(105%) brightness(35%);
+  filter: blur(55px) saturate(50%) contrast(150%) brightness(25%);
 }
+
+/*CyberPunk Mono accent override*/
+:root {--accent: 200, 200, 200;} /* Light Gray #c8c8c8 */
+:root {--indicator: 0, 204, 204;} /* Subtle Cyan #00cccc */

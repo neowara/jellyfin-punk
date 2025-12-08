@@ -1,15 +1,28 @@
 /*Jellyfin-Punk Dark Preset - Deep Purple & Magenta*/
 /*Darker, more intense cyberpunk with rich purple tones*/
 
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/jf_font.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fixes.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/base.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/accentlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/rounding.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/smallercast.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/episodelist/episodes_compactlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/header/header_transparent-dashboard.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/login/login_minimalistic.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fields/fields_border.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/cornerindicator/indicator_corner.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_dark.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/titlepage/title_simple.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/overlayprogress.css');
 
-/*Subtle rounding for modern cyberpunk feel*/
-:root {--rounding: 4px;}
+:root {--rounding: 5px;}
 
-/*Style backdrop - more blur and deeper darkness*/
+/*Style backdrop - deeper darkness with purple tint*/
 .backdropImage {
-  filter: blur(20px) saturate(120%) contrast(115%) brightness(30%);
+  filter: blur(65px) saturate(210%) contrast(170%) brightness(22%);
 }
+
+/*CyberPunk Dark accent override*/
+:root {--accent: 139, 0, 255;} /* Deep Purple #8b00ff */
+:root {--indicator: 230, 0, 122;} /* Hot Pink #e6007a */

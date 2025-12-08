@@ -1,15 +1,28 @@
 /*Jellyfin-Punk Blue Preset - Electric Blue & Neon Yellow*/
 /*Classic cyberpunk aesthetic inspired by Blade Runner*/
 
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/jf_font.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fixes.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/base.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/accentlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/rounding.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/smallercast.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/episodelist/episodes_compactlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/header/header_transparent-dashboard.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/login/login_minimalistic.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fields/fields_border.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/cornerindicator/indicator_corner.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_blue.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/titlepage/title_simple.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/overlayprogress.css');
 
-/*Subtle rounding for modern cyberpunk feel*/
-:root {--rounding: 4px;}
+:root {--rounding: 5px;}
 
-/*Style backdrop - subtle blur and darkening*/
+/*Style backdrop - cyberpunk blue atmosphere*/
 .backdropImage {
-  filter: blur(18px) saturate(110%) contrast(110%) brightness(35%);
+  filter: blur(60px) saturate(200%) contrast(160%) brightness(25%);
 }
+
+/*CyberPunk Blue accent override*/
+:root {--accent: 0, 164, 220;} /* Electric Blue #00a4dc */
+:root {--indicator: 255, 215, 0;} /* Neon Yellow #ffd700 */
