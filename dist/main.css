@@ -1,383 +1,75 @@
 /**
- * Jellyfin-Punk Theme - Clean & Minimal
- * A subtle CyberPunk aesthetic without breaking Jellyfin's UI
- * Version: 1.3.0
- * Author: Jellyfin-Punk Team
- * License: MIT
+ * Jellyfin-Punk Theme - Ultra Minimal
+ * Just color changes, no layout modifications
+ * Version: 1.4.0
  */
 
-/* ============================================
-   CSS VARIABLES
-   ============================================ */
 :root {
-    /* Accent Colors - Muted */
     --accent-color: #00cccc;
-    --accent-color-hover: #00e6e6;
-    --secondary-accent: #cc00aa;
-
-    /* Backgrounds */
-    --bg-primary: #0d0d15;
-    --bg-secondary: #12121c;
-    --bg-card: #16162a;
-
-    /* Text */
-    --text-primary: #e5e5f0;
-    --text-secondary: #a0a0b8;
-    --text-muted: #707080;
-
-    /* Borders */
-    --border-color: rgba(0, 204, 204, 0.2);
-    --border-color-hover: rgba(0, 204, 204, 0.4);
 }
 
-/* ============================================
-   GLOBAL - Keep it simple
-   ============================================ */
-
+/* Only change background and text colors */
 body {
-    background-color: var(--bg-primary) !important;
-    color: var(--text-primary) !important;
+    background-color: #0d0d15 !important;
 }
 
-.backgroundContainer {
-    background-color: var(--bg-primary) !important;
+/* Section titles */
+.sectionTitle {
+    color: var(--accent-color) !important;
+    text-transform: uppercase;
 }
 
-/* Backdrop - keep images visible */
-.backdropImage {
-    opacity: 0.08 !important;
-}
-
-/* ============================================
-   CARDS - Minimal styling
-   ============================================ */
-
-.card,
-.cardBox {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* Only show border on hover */
-.card:hover,
-.cardBox:hover {
-    border: 1px solid var(--border-color-hover) !important;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
-    transform: translateY(-2px);
-}
-
-/* Remove all overlays and filters on card images */
-.cardImageContainer,
-.cardPadder,
-.cardScalable {
-    background: none !important;
-    backdrop-filter: none !important;
-}
-
-/* Make sure images are visible */
-.cardImage {
-    opacity: 1 !important;
-    filter: none !important;
-}
-
-/* Card text - no glows */
-.cardText {
-    color: var(--text-primary) !important;
-    text-shadow: none !important;
-}
-
-.cardText-secondary {
-    color: var(--text-secondary) !important;
-}
-
-/* ============================================
-   NAVIGATION
-   ============================================ */
-
-/* Header */
+/* Navigation header */
 .skinHeader {
     background-color: rgba(13, 13, 21, 0.95) !important;
-    border-bottom: 1px solid var(--border-color) !important;
-    backdrop-filter: blur(10px) !important;
 }
 
 .headerButton {
-    color: var(--text-secondary) !important;
+    color: #a0a0b8 !important;
 }
 
 .headerButton:hover {
     color: var(--accent-color) !important;
 }
 
-/* Section Titles - Clean, no glow */
-.sectionTitle {
-    color: var(--accent-color) !important;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-shadow: none !important;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 8px;
-}
-
-/* Side Menu */
+/* Side menu */
 .navMenuOption {
-    color: var(--text-secondary) !important;
+    color: #a0a0b8 !important;
 }
 
 .navMenuOption:hover {
     color: var(--accent-color) !important;
-    background-color: rgba(0, 204, 204, 0.08) !important;
 }
 
 .navMenuOption-selected {
     color: var(--accent-color) !important;
-    background-color: rgba(0, 204, 204, 0.12) !important;
     border-left: 3px solid var(--accent-color) !important;
 }
 
-/* ============================================
-   BUTTONS - Simple & Clean
-   ============================================ */
-
-.button-flat,
-.raised,
-.raisedButton {
-    background-color: rgba(0, 204, 204, 0.15) !important;
-    color: var(--accent-color) !important;
-    border: 1px solid rgba(0, 204, 204, 0.3) !important;
-    box-shadow: none !important;
-}
-
+/* Buttons */
 .button-flat:hover,
 .raised:hover,
 .raisedButton:hover {
-    background-color: rgba(0, 204, 204, 0.25) !important;
-    border-color: var(--accent-color-hover) !important;
-}
-
-/* Play button */
-.btnPlay {
-    background-color: var(--accent-color) !important;
-    color: #000 !important;
-}
-
-.btnPlay:hover {
-    background-color: var(--accent-color-hover) !important;
-}
-
-.paper-icon-button-light {
-    color: var(--text-secondary) !important;
-}
-
-.paper-icon-button-light:hover {
-    color: var(--accent-color) !important;
-}
-
-/* ============================================
-   FORMS - Minimal
-   ============================================ */
-
-.emby-input,
-.emby-textarea,
-.emby-select {
-    background-color: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
-    border: 1px solid var(--border-color) !important;
-}
-
-.emby-input:focus,
-.emby-textarea:focus,
-.emby-select:focus {
-    border-color: var(--accent-color) !important;
-    outline: none !important;
-}
-
-.emby-checkbox:checked + span + .checkboxOutline {
-    background-color: var(--accent-color) !important;
     border-color: var(--accent-color) !important;
 }
 
-/* ============================================
-   INDICATORS - Clean
-   ============================================ */
-
-.countIndicator {
-    background-color: var(--secondary-accent) !important;
-    color: #fff !important;
-}
-
-.playedIndicator {
-    background-color: #88cc00 !important;
-}
-
-/* Progress bar */
-.itemProgressBar {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-}
-
+/* Progress bars */
 .itemProgressBarForeground {
     background-color: var(--accent-color) !important;
 }
 
-/* ============================================
-   MEDIA PLAYER
-   ============================================ */
-
-.videoOsdBottom {
-    background: linear-gradient(to top, rgba(13, 13, 21, 0.9), transparent) !important;
-}
-
-.nowPlayingBar {
-    background-color: rgba(13, 13, 21, 0.95) !important;
-    border-top: 1px solid var(--border-color) !important;
-}
-
-/* ============================================
-   DIALOGS
-   ============================================ */
-
-.dialog {
-    background-color: var(--bg-secondary) !important;
-    border: 1px solid var(--border-color) !important;
-}
-
-.dialogHeader {
-    background-color: rgba(0, 204, 204, 0.1) !important;
-    color: var(--accent-color) !important;
-}
-
-/* ============================================
-   LISTS
-   ============================================ */
-
-.listItem {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-}
-
-.listItem:hover {
-    background-color: rgba(0, 204, 204, 0.05) !important;
-}
-
-/* ============================================
-   SCROLLBARS
-   ============================================ */
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--bg-secondary);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(0, 204, 204, 0.3);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 204, 204, 0.5);
-}
-
-/* ============================================
-   TABS
-   ============================================ */
-
-.emby-tab-button {
-    color: var(--text-secondary) !important;
-}
-
-.emby-tab-button:hover {
-    color: var(--accent-color) !important;
-}
-
+/* Tabs */
 .emby-tab-button-active {
     color: var(--accent-color) !important;
-    border-bottom: 2px solid var(--accent-color) !important;
+    border-bottom-color: var(--accent-color) !important;
 }
 
-/* ============================================
-   SPECIFIC FIXES
-   ============================================ */
-
-/* Remove all card overlays that block images */
-.cardOverlayInner,
-.cardOverlayButton-hover {
-    background: rgba(13, 13, 21, 0.85) !important;
-    backdrop-filter: blur(8px) !important;
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 204, 204, 0.3) !important;
 }
 
-/* Card indicators should not block content */
-.cardIndicators {
-    opacity: 0.9 !important;
-}
-
-.cardIndicator {
-    background: rgba(0, 204, 204, 0.2) !important;
-    border: 1px solid rgba(0, 204, 204, 0.4) !important;
-    color: var(--accent-color) !important;
-    backdrop-filter: blur(4px) !important;
-    font-size: 11px !important;
-    padding: 2px 6px !important;
-}
-
-/* Image tags */
-.imageTag {
-    background: rgba(0, 204, 204, 0.2) !important;
-    border: 1px solid rgba(0, 204, 204, 0.4) !important;
-    color: var(--accent-color) !important;
-}
-
-/* Make sure nothing blocks poster images */
-.cardContent-shadow {
-    display: none !important;
-}
-
-.cardPadder-backdrop {
-    background: none !important;
-}
-
-/* Item details */
-.itemDetailPage {
-    background-color: var(--bg-primary) !important;
-}
-
-/* Dashboard */
-.dashboardTileLink {
-    background-color: var(--bg-card) !important;
-    border: 1px solid var(--border-color) !important;
-}
-
-.dashboardTileLink:hover {
-    border-color: var(--border-color-hover) !important;
-}
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-
-@media (max-width: 768px) {
-    .card:hover,
-    .cardBox:hover {
-        transform: none;
-    }
-}
-
-/* ============================================
-   ACCESSIBILITY
-   ============================================ */
-
+/* Focus indicator */
 *:focus-visible {
-    outline: 2px solid var(--accent-color) !important;
-    outline-offset: 2px !important;
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }
+    outline-color: var(--accent-color) !important;
 }
