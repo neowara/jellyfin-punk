@@ -1,0 +1,225 @@
+/*Jellyfin-Punk Cyberpunk Enhancements - Aggressive Styling*/
+
+/*Glowing borders on cards*/
+.card:hover .cardBox {
+    border: 2px solid rgba(var(--accent), 0.8) !important;
+    box-shadow: 0 0 20px rgba(var(--accent), 0.6),
+                0 0 40px rgba(var(--accent), 0.4),
+                inset 0 0 20px rgba(var(--accent), 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+/*Colorful card overlays*/
+.cardOverlayContainer {
+    background: linear-gradient(to top,
+        rgba(var(--accent), 0.9) 0%,
+        rgba(var(--accent), 0.7) 50%,
+        transparent 100%) !important;
+}
+
+/*Section titles with glow*/
+.sectionTitle {
+    color: rgba(var(--accent)) !important;
+    text-shadow: 0 0 10px rgba(var(--accent), 0.8),
+                 0 0 20px rgba(var(--accent), 0.6),
+                 0 0 30px rgba(var(--accent), 0.4) !important;
+}
+
+/*Buttons with accent colors*/
+.button-flat,
+.raised,
+.fab,
+.emby-button {
+    background: linear-gradient(135deg,
+        rgba(var(--accent), 0.3) 0%,
+        rgba(var(--accent), 0.1) 100%) !important;
+    border: 1px solid rgba(var(--accent), 0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.button-flat:hover,
+.raised:hover,
+.fab:hover,
+.emby-button:hover {
+    background: linear-gradient(135deg,
+        rgba(var(--accent), 0.6) 0%,
+        rgba(var(--accent), 0.3) 100%) !important;
+    border: 1px solid rgba(var(--accent), 1) !important;
+    box-shadow: 0 0 15px rgba(var(--accent), 0.6) !important;
+}
+
+/*Popup menus with cyberpunk styling*/
+.actionSheetContent,
+.dialog,
+.toast {
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(var(--accent), 0.2) 100%) !important;
+    border: 2px solid rgba(var(--accent), 0.6) !important;
+    box-shadow: 0 0 30px rgba(var(--accent), 0.5),
+                0 0 60px rgba(var(--accent), 0.3) !important;
+}
+
+.actionSheetMenuItem {
+    border-bottom: 1px solid rgba(var(--accent), 0.2) !important;
+}
+
+.actionSheetMenuItem:hover {
+    background: rgba(var(--accent), 0.3) !important;
+    border-left: 3px solid rgba(var(--accent), 1) !important;
+}
+
+/*Navigation drawer with accent*/
+.mainDrawer {
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(var(--accent), 0.15) 100%) !important;
+    border-right: 2px solid rgba(var(--accent), 0.4) !important;
+}
+
+.navMenuOption:hover {
+    background: linear-gradient(90deg,
+        rgba(var(--accent), 0.4) 0%,
+        transparent 100%) !important;
+    border-left: 4px solid rgba(var(--accent), 1) !important;
+}
+
+.navMenuOption-selected {
+    background: linear-gradient(90deg,
+        rgba(var(--accent), 0.5) 0%,
+        rgba(var(--accent), 0.2) 100%) !important;
+    border-left: 4px solid rgba(var(--accent), 1) !important;
+}
+
+/*Input fields with accent borders*/
+.emby-input:focus,
+.emby-textarea:focus,
+.emby-select:focus {
+    border: 2px solid rgba(var(--accent), 0.8) !important;
+    box-shadow: 0 0 15px rgba(var(--accent), 0.5) !important;
+    background: rgba(var(--accent), 0.05) !important;
+}
+
+/*Library buttons with gradients*/
+.homeLibraryButton {
+    background: linear-gradient(135deg,
+        rgba(var(--accent), 0.2) 0%,
+        rgba(0, 0, 0, 0.6) 100%) !important;
+    border: 2px solid rgba(var(--accent), 0.4) !important;
+}
+
+.homeLibraryButton:hover {
+    background: linear-gradient(135deg,
+        rgba(var(--accent), 0.5) 0%,
+        rgba(var(--accent), 0.2) 100%) !important;
+    border: 2px solid rgba(var(--accent), 0.8) !important;
+    box-shadow: 0 0 20px rgba(var(--accent), 0.6) !important;
+}
+
+/*Top bar with gradient*/
+.skinHeader {
+    background: linear-gradient(to right,
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(var(--accent), 0.2) 50%,
+        rgba(0, 0, 0, 0.9) 100%) !important;
+    border-bottom: 2px solid rgba(var(--accent), 0.5) !important;
+}
+
+/*Indicators with accent glow*/
+.cardIndicators,
+.playedIndicator,
+.countIndicator {
+    background: rgba(var(--indicator), 0.9) !important;
+    border: 2px solid rgba(var(--indicator), 1) !important;
+    box-shadow: 0 0 10px rgba(var(--indicator), 0.8) !important;
+    font-weight: bold !important;
+}
+
+/*Progress bars with vibrant colors*/
+.itemProgressBar {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(var(--accent), 0.3) !important;
+}
+
+.itemProgressBarForeground {
+    background: linear-gradient(90deg,
+        rgba(var(--accent), 1) 0%,
+        rgba(var(--indicator), 1) 100%) !important;
+    box-shadow: 0 0 10px rgba(var(--accent), 0.8) !important;
+}
+
+/*Scrollbar with accent*/
+::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(var(--accent), 0.2) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+        rgba(var(--accent), 0.8) 0%,
+        rgba(var(--accent), 0.5) 100%) !important;
+    border: 1px solid rgba(var(--accent), 1) !important;
+    box-shadow: 0 0 10px rgba(var(--accent), 0.6) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(var(--accent), 1) !important;
+    box-shadow: 0 0 15px rgba(var(--accent), 0.9) !important;
+}
+
+/*Tab buttons with accent*/
+.emby-tab-button {
+    border-bottom: 3px solid transparent !important;
+}
+
+.emby-tab-button:hover {
+    border-bottom: 3px solid rgba(var(--accent), 0.6) !important;
+}
+
+.emby-tab-button-active,
+.emby-tab-button.show-focus:focus {
+    border-bottom: 3px solid rgba(var(--accent), 1) !important;
+    color: rgba(var(--accent)) !important;
+    text-shadow: 0 0 10px rgba(var(--accent), 0.8) !important;
+}
+
+/*Checkbox with accent*/
+.emby-checkbox:checked + span + .checkboxOutline {
+    background: rgba(var(--accent), 0.8) !important;
+    border-color: rgba(var(--accent), 1) !important;
+    box-shadow: 0 0 10px rgba(var(--accent), 0.6) !important;
+}
+
+/*List items with hover effect*/
+.listItem:hover {
+    background: linear-gradient(90deg,
+        rgba(var(--accent), 0.3) 0%,
+        transparent 100%) !important;
+    border-left: 4px solid rgba(var(--accent), 0.8) !important;
+}
+
+/*Search box with accent*/
+.searchResults {
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(var(--accent), 0.15) 100%) !important;
+    border: 2px solid rgba(var(--accent), 0.5) !important;
+    box-shadow: 0 0 30px rgba(var(--accent), 0.4) !important;
+}
+
+/*Media info with accent highlights*/
+.mediaInfoText,
+.secondaryText {
+    color: rgba(var(--accent), 0.8) !important;
+}
+
+/*Cast/Crew cards with borders*/
+.personCard:hover .cardBox {
+    border: 2px solid rgba(var(--indicator), 0.8) !important;
+    box-shadow: 0 0 15px rgba(var(--indicator), 0.6) !important;
+}

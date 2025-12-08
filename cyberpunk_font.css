@@ -1,0 +1,16 @@
+/*Cyberpunk Font - Orbitron from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+/*Make text more cyberpunk with letter spacing*/
+body, h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.5px;
+}
+
+.sectionTitle {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

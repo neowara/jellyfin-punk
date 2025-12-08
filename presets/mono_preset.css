@@ -1,20 +1,38 @@
 /*Jellyfin-Punk Mono Preset - Black & White with Cyan*/
 /*Minimalist cyberpunk with monochrome palette and subtle cyan accents*/
 
+/* Core Ultrachromic modules */
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/jf_font.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fixes.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/base.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/accentlist.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/rounding.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/smallercast.css');
-@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/episodelist/episodes_compactlist.css');
+
+/* Episodes as grid */
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/episodelist/episodes_grid.css');
+
+/* Optional modules */
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/header/header_transparent-dashboard.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/login/login_minimalistic.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fields/fields_border.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/cornerindicator/indicator_corner.css');
-@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_mono.css');
-@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/titlepage/title_simple.css');
+
+/* Title page with logo */
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/titlepage/title_simple-logo.css');
 @import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/overlayprogress.css');
+
+/* CyberPunk Mono theme colors */
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_mono.css');
+
+/* CyberPunk font (Orbitron) */
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/cyberpunk_font.css');
+
+/* Monochrome gradient backgrounds */
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/gradients/mono_gradients.css');
+
+/* CyberPunk visual enhancements (glows, borders, etc.) */
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/cyberpunk_enhancements.css');
 
 :root {--rounding: 5px;}
 

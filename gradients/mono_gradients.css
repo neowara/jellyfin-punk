@@ -1,0 +1,51 @@
+/*Mono Theme - Black & White with Cyan Gradients*/
+
+/*Main background gradient*/
+body {
+    background: linear-gradient(135deg,
+        #000000 0%,
+        #0a0a0a 25%,
+        #141414 50%,
+        #0a0a0a 75%,
+        #000000 100%) fixed !important;
+}
+
+.backgroundContainer {
+    background: linear-gradient(to bottom,
+        rgba(200, 200, 200, 0.1) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 204, 204, 0.08) 100%) !important;
+}
+
+/*Page backgrounds with gradient*/
+.view {
+    background: linear-gradient(to bottom,
+        rgba(200, 200, 200, 0.08) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba(0, 204, 204, 0.05) 100%) !important;
+}
+
+/*Dashboard sections*/
+.dashboardSection {
+    background: linear-gradient(135deg,
+        rgba(200, 200, 200, 0.06) 0%,
+        rgba(0, 0, 0, 0.6) 100%) !important;
+    border: 1px solid rgba(200, 200, 200, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+/*Detail page background*/
+.detailPagePrimaryContainer {
+    background: linear-gradient(to right,
+        rgba(200, 200, 200, 0.15) 0%,
+        transparent 50%) !important;
+}
+
+.detailPageSecondaryContainer {
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(0, 204, 204, 0.1) 100%) !important;
+}

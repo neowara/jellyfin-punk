@@ -1,0 +1,51 @@
+/*Blue Theme - Electric Blue & Neon Yellow Gradients*/
+
+/*Main background gradient*/
+body {
+    background: linear-gradient(135deg,
+        #000810 0%,
+        #001a2e 25%,
+        #002d4a 50%,
+        #001a2e 75%,
+        #000810 100%) fixed !important;
+}
+
+.backgroundContainer {
+    background: linear-gradient(to bottom,
+        rgba(0, 164, 220, 0.15) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(255, 215, 0, 0.1) 100%) !important;
+}
+
+/*Page backgrounds with gradient*/
+.view {
+    background: linear-gradient(to bottom,
+        rgba(0, 164, 220, 0.1) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba(255, 215, 0, 0.05) 100%) !important;
+}
+
+/*Dashboard sections*/
+.dashboardSection {
+    background: linear-gradient(135deg,
+        rgba(0, 164, 220, 0.08) 0%,
+        rgba(0, 0, 0, 0.4) 100%) !important;
+    border: 1px solid rgba(0, 164, 220, 0.3) !important;
+    border-radius: 8px !important;
+    padding: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+/*Detail page background*/
+.detailPagePrimaryContainer {
+    background: linear-gradient(to right,
+        rgba(0, 164, 220, 0.2) 0%,
+        transparent 50%) !important;
+}
+
+.detailPageSecondaryContainer {
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(0, 164, 220, 0.1) 100%) !important;
+}

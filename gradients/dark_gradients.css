@@ -1,0 +1,51 @@
+/*Dark Theme - Deep Purple & Hot Pink Gradients*/
+
+/*Main background gradient*/
+body {
+    background: linear-gradient(135deg,
+        #0a0015 0%,
+        #1a0030 25%,
+        #2d0050 50%,
+        #1a0030 75%,
+        #0a0015 100%) fixed !important;
+}
+
+.backgroundContainer {
+    background: linear-gradient(to bottom,
+        rgba(139, 0, 255, 0.2) 0%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(230, 0, 122, 0.15) 100%) !important;
+}
+
+/*Page backgrounds with gradient*/
+.view {
+    background: linear-gradient(to bottom,
+        rgba(139, 0, 255, 0.15) 0%,
+        transparent 30%,
+        transparent 70%,
+        rgba(230, 0, 122, 0.1) 100%) !important;
+}
+
+/*Dashboard sections*/
+.dashboardSection {
+    background: linear-gradient(135deg,
+        rgba(139, 0, 255, 0.12) 0%,
+        rgba(0, 0, 0, 0.5) 100%) !important;
+    border: 1px solid rgba(139, 0, 255, 0.4) !important;
+    border-radius: 8px !important;
+    padding: 1em !important;
+    margin-bottom: 1em !important;
+}
+
+/*Detail page background*/
+.detailPagePrimaryContainer {
+    background: linear-gradient(to right,
+        rgba(139, 0, 255, 0.25) 0%,
+        transparent 50%) !important;
+}
+
+.detailPageSecondaryContainer {
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(230, 0, 122, 0.15) 100%) !important;
+}
