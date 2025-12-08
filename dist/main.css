@@ -1,0 +1,670 @@
+/**
+ * Jellyfin-Punk Theme
+ * A CyberPunk-themed CSS customization for Jellyfin
+ * Version: 1.0.0
+ * Author: Jellyfin-Punk Team
+ * License: MIT
+ */
+
+/* ============================================
+   CSS VARIABLES
+   ============================================ */
+:root {
+    /* Primary Colors */
+    --accent-cyan: #00ffff;
+    --accent-cyan-dark: #00d4d4;
+    --accent-magenta: #ff0080;
+    --accent-magenta-dark: #d4006a;
+    --accent-purple: #cc11f0;
+    --accent-purple-dark: #a00ec4;
+    --accent-green: #b0ff00;
+    --accent-yellow: #ffdf6b;
+
+    /* Background Colors */
+    --background-primary: #070014;
+    --background-secondary: #0a0a1f;
+    --background-tertiary: #12122e;
+    --background-elevated: #1a1a3a;
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #b8b8d1;
+    --text-tertiary: #8888a8;
+    --text-muted: #5a5a78;
+
+    /* Glow Effects */
+    --glow-cyan: 0 0 10px var(--accent-cyan), 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan);
+    --glow-magenta: 0 0 10px var(--accent-magenta), 0 0 20px var(--accent-magenta), 0 0 30px var(--accent-magenta);
+    --glow-purple: 0 0 10px var(--accent-purple), 0 0 20px var(--accent-purple), 0 0 30px var(--accent-purple);
+    --glow-intensity: 15px;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    /* Transitions */
+    --transition-fast: 0.15s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+/* Main Background */
+body {
+    background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Background Container */
+.backgroundContainer {
+    background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%) !important;
+}
+
+/* Page Content Backdrop */
+.backdropImage {
+    opacity: 0.15 !important;
+    filter: saturate(1.5) brightness(0.6) !important;
+}
+
+/* ============================================
+   CARDS & CONTENT
+   ============================================ */
+
+/* Card Styling */
+.card,
+.cardBox {
+    background: rgba(10, 10, 31, 0.85) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    border-radius: var(--border-radius-md) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    transition: all var(--transition-normal) !important;
+}
+
+.card:hover,
+.cardBox:hover {
+    border-color: var(--accent-cyan) !important;
+    box-shadow: var(--glow-cyan), 0 4px 30px rgba(0, 0, 0, 0.7) !important;
+    transform: translateY(-4px) !important;
+}
+
+/* Card Content */
+.cardContent {
+    background: transparent !important;
+}
+
+/* Card Image Container */
+.cardImageContainer {
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0 !important;
+    overflow: hidden !important;
+}
+
+/* Card Text */
+.cardText,
+.cardText-secondary {
+    color: var(--text-primary) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5) !important;
+}
+
+/* Item Details */
+.itemDetailPage {
+    background: linear-gradient(135deg, var(--background-primary) 0%, var(--background-secondary) 100%) !important;
+}
+
+.itemDetailImage {
+    border: 2px solid var(--accent-cyan) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+/* Primary Button */
+.button-flat,
+.raised,
+.raisedButton,
+.paper-icon-button-light {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%) !important;
+    color: var(--background-primary) !important;
+    border: none !important;
+    border-radius: var(--border-radius-md) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: all var(--transition-normal) !important;
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3) !important;
+}
+
+.button-flat:hover,
+.raised:hover,
+.raisedButton:hover,
+.paper-icon-button-light:hover {
+    box-shadow: var(--glow-cyan) !important;
+    transform: translateY(-2px) scale(1.05) !important;
+}
+
+/* Accent Button */
+.button-accent {
+    background: linear-gradient(135deg, var(--accent-magenta) 0%, var(--accent-purple) 100%) !important;
+    box-shadow: 0 2px 10px rgba(255, 0, 128, 0.3) !important;
+}
+
+.button-accent:hover {
+    box-shadow: var(--glow-magenta) !important;
+}
+
+/* Submit Button */
+.button-submit {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-green) 100%) !important;
+    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.3) !important;
+}
+
+.button-submit:hover {
+    box-shadow: 0 0 20px var(--accent-green) !important;
+}
+
+/* Icon Buttons */
+.paper-icon-button-light {
+    background: rgba(0, 255, 255, 0.1) !important;
+    color: var(--accent-cyan) !important;
+}
+
+.paper-icon-button-light:hover {
+    background: rgba(0, 255, 255, 0.2) !important;
+    color: var(--accent-cyan) !important;
+}
+
+/* Play Button */
+.itemAction.textActionButton,
+.btnPlay {
+    background: linear-gradient(135deg, var(--accent-magenta) 0%, var(--accent-cyan) 100%) !important;
+    border: 2px solid var(--accent-cyan) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+.itemAction.textActionButton:hover,
+.btnPlay:hover {
+    box-shadow: 0 0 30px var(--accent-cyan), 0 0 40px var(--accent-magenta) !important;
+    transform: scale(1.1) !important;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+
+/* Top Navigation Bar */
+.skinHeader {
+    background: rgba(7, 0, 20, 0.95) !important;
+    border-bottom: 2px solid var(--accent-cyan) !important;
+    box-shadow: 0 2px 20px rgba(0, 255, 255, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Header Buttons */
+.headerButton {
+    color: var(--accent-cyan) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.headerButton:hover {
+    color: var(--text-primary) !important;
+    text-shadow: var(--glow-cyan) !important;
+}
+
+/* Side Navigation Drawer */
+.mainDrawer-scrollContainer,
+.navMenuOption {
+    background: rgba(10, 10, 31, 0.95) !important;
+    border-right: 1px solid rgba(0, 255, 255, 0.3) !important;
+}
+
+.navMenuOption {
+    color: var(--text-secondary) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.navMenuOption:hover {
+    background: rgba(0, 255, 255, 0.1) !important;
+    color: var(--accent-cyan) !important;
+    border-left: 3px solid var(--accent-cyan) !important;
+}
+
+.navMenuOption-selected {
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.2) 0%, transparent 100%) !important;
+    color: var(--accent-cyan) !important;
+    border-left: 3px solid var(--accent-cyan) !important;
+    box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.1) !important;
+}
+
+/* Home Sections */
+.sectionTitle {
+    color: var(--accent-cyan) !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-shadow: var(--glow-cyan) !important;
+    border-bottom: 2px solid var(--accent-cyan) !important;
+    padding-bottom: 10px !important;
+}
+
+/* ============================================
+   FORMS & INPUTS
+   ============================================ */
+
+/* Input Fields */
+.emby-input,
+.emby-textarea,
+.emby-select {
+    background: rgba(10, 10, 31, 0.8) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    border-radius: var(--border-radius-md) !important;
+    transition: all var(--transition-normal) !important;
+}
+
+.emby-input:focus,
+.emby-textarea:focus,
+.emby-select:focus {
+    border-color: var(--accent-cyan) !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5) !important;
+    outline: none !important;
+}
+
+/* Checkboxes */
+.emby-checkbox:checked + span + .checkboxOutline {
+    background: var(--accent-cyan) !important;
+    border-color: var(--accent-cyan) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+/* Toggle Switch */
+.toggleButton-emby-checked {
+    background: var(--accent-cyan) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+/* Select Dropdown */
+.emby-select-withcolor {
+    background: rgba(10, 10, 31, 0.95) !important;
+    border: 1px solid var(--accent-cyan) !important;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3) !important;
+}
+
+/* ============================================
+   MEDIA PLAYER
+   ============================================ */
+
+/* Video OSD (On-Screen Display) */
+.videoOsdBottom {
+    background: linear-gradient(to top, rgba(7, 0, 20, 0.95) 0%, transparent 100%) !important;
+}
+
+/* Progress Bar */
+.mdl-slider,
+.itemProgressBar {
+    background: rgba(0, 255, 255, 0.2) !important;
+}
+
+.mdl-slider::-webkit-slider-thumb {
+    background: var(--accent-cyan) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+.mdl-slider::-moz-range-thumb {
+    background: var(--accent-cyan) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+.itemProgressBarForeground {
+    background: linear-gradient(90deg, var(--accent-cyan) 0%, var(--accent-magenta) 100%) !important;
+    box-shadow: 0 0 10px var(--accent-cyan) !important;
+}
+
+/* Now Playing Bar */
+.nowPlayingBar {
+    background: rgba(7, 0, 20, 0.95) !important;
+    border-top: 2px solid var(--accent-magenta) !important;
+    box-shadow: 0 -2px 20px rgba(255, 0, 128, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* Volume Slider */
+.mdl-slider-background-upper {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.mdl-slider-background-lower {
+    background: var(--accent-cyan) !important;
+    box-shadow: 0 0 10px var(--accent-cyan) !important;
+}
+
+/* ============================================
+   DIALOGS & MODALS
+   ============================================ */
+
+/* Dialog Container */
+.dialog,
+.actionsheet {
+    background: rgba(10, 10, 31, 0.98) !important;
+    border: 2px solid var(--accent-cyan) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: var(--glow-cyan), 0 10px 50px rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.dialogHeader {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%) !important;
+    color: var(--background-primary) !important;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dialogContent {
+    color: var(--text-primary) !important;
+}
+
+/* ============================================
+   LISTS & TABLES
+   ============================================ */
+
+/* List Items */
+.listItem {
+    background: rgba(10, 10, 31, 0.5) !important;
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.listItem:hover {
+    background: rgba(0, 255, 255, 0.1) !important;
+    border-left: 3px solid var(--accent-cyan) !important;
+    transform: translateX(5px) !important;
+}
+
+.listItemImage {
+    border: 1px solid var(--accent-cyan) !important;
+    border-radius: var(--border-radius-sm) !important;
+}
+
+/* Tables */
+.tblLibraryMappings {
+    background: rgba(10, 10, 31, 0.8) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    border-radius: var(--border-radius-md) !important;
+}
+
+.tblLibraryMappings th {
+    background: rgba(0, 255, 255, 0.1) !important;
+    color: var(--accent-cyan) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+.tblLibraryMappings tr:hover {
+    background: rgba(0, 255, 255, 0.05) !important;
+}
+
+/* ============================================
+   INDICATORS & BADGES
+   ============================================ */
+
+/* Played Indicator */
+.playedIndicator {
+    background: var(--accent-green) !important;
+    box-shadow: 0 0 10px var(--accent-green) !important;
+}
+
+/* Unplayed Count */
+.countIndicator {
+    background: var(--accent-magenta) !important;
+    color: var(--text-primary) !important;
+    border: 2px solid var(--accent-cyan) !important;
+    box-shadow: var(--glow-magenta) !important;
+    font-weight: 700 !important;
+}
+
+/* Rating */
+.starIcon {
+    color: var(--accent-yellow) !important;
+    filter: drop-shadow(0 0 5px var(--accent-yellow)) !important;
+}
+
+/* ============================================
+   SCROLLBARS
+   ============================================ */
+
+/* Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-secondary) !important;
+    border-radius: var(--border-radius-sm) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%) !important;
+    border-radius: var(--border-radius-sm) !important;
+    border: 2px solid var(--background-secondary) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--accent-magenta) 0%, var(--accent-cyan) 100%) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--accent-cyan) var(--background-secondary) !important;
+}
+
+/* ============================================
+   LIBRARY & COLLECTIONS
+   ============================================ */
+
+/* Library Tiles */
+.cardOverlayButton,
+.cardOverlayTarget {
+    background: rgba(7, 0, 20, 0.9) !important;
+    border: 1px solid var(--accent-cyan) !important;
+}
+
+.cardOverlayButton:hover {
+    background: rgba(0, 255, 255, 0.2) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+/* Folder/Collection View */
+.listItemIconContainer {
+    color: var(--accent-cyan) !important;
+}
+
+/* ============================================
+   DASHBOARD/ADMIN
+   ============================================ */
+
+/* Dashboard Cards */
+.paperList {
+    background: rgba(10, 10, 31, 0.8) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    border-radius: var(--border-radius-md) !important;
+}
+
+/* Dashboard Buttons */
+.dashboardTileLink {
+    background: rgba(10, 10, 31, 0.8) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    border-radius: var(--border-radius-md) !important;
+    transition: all var(--transition-normal) !important;
+}
+
+.dashboardTileLink:hover {
+    border-color: var(--accent-cyan) !important;
+    box-shadow: var(--glow-cyan) !important;
+    transform: translateY(-4px) !important;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow Pulse Animation */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px var(--accent-cyan);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--accent-cyan), 0 0 30px var(--accent-cyan);
+    }
+}
+
+/* Apply fade in to main content */
+.mainAnimatedPage {
+    animation: fadeIn var(--transition-slow) !important;
+}
+
+/* ============================================
+   MISC ELEMENTS
+   ============================================ */
+
+/* Search Bar */
+.searchInput {
+    background: rgba(10, 10, 31, 0.95) !important;
+    border: 1px solid var(--accent-cyan) !important;
+    border-radius: var(--border-radius-lg) !important;
+    color: var(--text-primary) !important;
+}
+
+.searchInput:focus {
+    box-shadow: var(--glow-cyan) !important;
+}
+
+/* Tooltip */
+.mdl-tooltip {
+    background: rgba(10, 10, 31, 0.95) !important;
+    border: 1px solid var(--accent-cyan) !important;
+    color: var(--text-primary) !important;
+    box-shadow: var(--glow-cyan) !important;
+}
+
+/* Spinner/Loading */
+.mdl-spinner__circle {
+    border-color: var(--accent-cyan) !important;
+}
+
+/* Tabs */
+.emby-tab-button {
+    color: var(--text-secondary) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.emby-tab-button:hover {
+    color: var(--accent-cyan) !important;
+}
+
+.emby-tab-button-active {
+    color: var(--accent-cyan) !important;
+    border-bottom: 3px solid var(--accent-cyan) !important;
+    box-shadow: 0 3px 10px rgba(0, 255, 255, 0.5) !important;
+}
+
+/* Context Menu */
+.actionSheetMenuItem {
+    color: var(--text-primary) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.actionSheetMenuItem:hover {
+    background: rgba(0, 255, 255, 0.1) !important;
+    color: var(--accent-cyan) !important;
+}
+
+/* Image Fallback */
+.defaultCardBackground {
+    background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-cyan) 100%) !important;
+}
+
+/* Cast Icon */
+.headerCastButton {
+    color: var(--accent-cyan) !important;
+}
+
+.headerCastButton.is-active {
+    color: var(--accent-green) !important;
+    animation: glowPulse 2s infinite !important;
+}
+
+/* ============================================
+   RESPONSIVE TWEAKS
+   ============================================ */
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .card:hover,
+    .cardBox:hover {
+        transform: none !important;
+    }
+
+    :root {
+        --glow-intensity: 10px;
+    }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1920px) {
+    .card,
+    .cardBox {
+        border-width: 2px !important;
+    }
+
+    :root {
+        --glow-intensity: 20px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Focus Indicators */
+*:focus-visible {
+    outline: 2px solid var(--accent-cyan) !important;
+    outline-offset: 2px !important;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --text-primary: #ffffff;
+        --background-primary: #000000;
+        --accent-cyan: #00ffff;
+    }
+}

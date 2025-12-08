@@ -1,0 +1,42 @@
+{
+  "name": "jellyfin-punk",
+  "version": "1.0.0",
+  "description": "A high-quality CyberPunk-themed CSS customization for Jellyfin with neon aesthetics and modern UI/UX design",
+  "main": "dist/main.css",
+  "style": "dist/main.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR-USERNAME/jellyfin-punk.git"
+  },
+  "keywords": [
+    "jellyfin",
+    "theme",
+    "css",
+    "cyberpunk",
+    "neon",
+    "dark-theme",
+    "ui",
+    "skin",
+    "customization",
+    "media-server"
+  ],
+  "author": "Jellyfin-Punk Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YOUR-USERNAME/jellyfin-punk/issues"
+  },
+  "homepage": "https://github.com/YOUR-USERNAME/jellyfin-punk#readme",
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "echo 'CSS files are pre-built in dist/'",
+    "test": "echo 'No tests configured yet'"
+  },
+  "devDependencies": {},
+  "dependencies": {},
+  "jsdelivr": "dist/"
+}

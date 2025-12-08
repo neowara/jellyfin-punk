@@ -1,0 +1,117 @@
+/**
+ * Jellyfin-Punk Theme - Scanlines Addon
+ * Adds retro CRT scanline effect overlay
+ * Version: 1.0.0
+ */
+
+/* ============================================
+   SCANLINE OVERLAY
+   ============================================ */
+
+/* Create scanline effect using repeating gradient */
+body::before {
+    content: "" !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    z-index: 9999 !important;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    ) !important;
+    animation: scanlineMove 8s linear infinite !important;
+}
+
+/* Scanline movement animation */
+@keyframes scanlineMove {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(2px);
+    }
+}
+
+/* CRT Flicker Effect */
+body::after {
+    content: "" !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    z-index: 9998 !important;
+    background: rgba(18, 16, 16, 0.1) !important;
+    opacity: 0 !important;
+    animation: flicker 0.15s infinite !important;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.05;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    100% {
+        opacity: 0.05;
+    }
+}
+
+/* ============================================
+   SCREEN CURVATURE
+   ============================================ */
+
+/* Subtle screen curve effect */
+#itemDetailPage,
+.mainAnimatedPages {
+    transform-style: preserve-3d !important;
+}
+
+/* ============================================
+   VIGNETTE EFFECT
+   ============================================ */
+
+/* Add vignette to enhance CRT feel */
+.backgroundContainer::before {
+    content: "" !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 0%,
+        transparent 60%,
+        rgba(0, 0, 0, 0.4) 100%
+    ) !important;
+}
+
+/* ============================================
+   PERFORMANCE MODE
+   ============================================ */
+
+/* Disable scanlines on mobile for better performance */
+@media (max-width: 768px) {
+    body::before {
+        display: none !important;
+    }
+}
+
+/* Disable for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none !important;
+    }
+}

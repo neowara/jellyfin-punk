@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jellyfin-Punk Theme Preview</title>
+    <link rel="stylesheet" href="dist/main.css">
+    <style>
+        /* Mock Jellyfin structure for preview */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .preview-container {
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .preview-section {
+            margin-bottom: 40px;
+        }
+
+        .preview-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .button-grid {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 15px;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mock Header -->
+    <div class="skinHeader" style="padding: 15px 20px; display: flex; align-items: center; gap: 20px;">
+        <div class="headerHomeButton headerButton" style="cursor: pointer;">🏠 Home</div>
+        <div class="headerButton" style="cursor: pointer;">📺 Library</div>
+        <div class="headerButton" style="cursor: pointer;">🔍 Search</div>
+        <div style="margin-left: auto;">
+            <div class="headerCastButton headerButton" style="cursor: pointer;">📡 Cast</div>
+        </div>
+    </div>
+
+    <div class="preview-container">
+        <!-- Section Title Preview -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">SECTION TITLE PREVIEW</h2>
+        </div>
+
+        <!-- Cards Preview -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">CONTENT CARDS</h2>
+            <div class="card-grid">
+                <div class="card cardBox">
+                    <div class="cardImageContainer">
+                        <div style="padding-bottom: 150%; background: linear-gradient(135deg, #cc11f0, #00ffff);"></div>
+                    </div>
+                    <div class="cardContent" style="padding: 10px;">
+                        <div class="cardText">Movie Title</div>
+                        <div class="cardText-secondary">2025 • Action</div>
+                    </div>
+                </div>
+                <div class="card cardBox">
+                    <div class="cardImageContainer">
+                        <div style="padding-bottom: 150%; background: linear-gradient(135deg, #ff0080, #a020f0);"></div>
+                    </div>
+                    <div class="cardContent" style="padding: 10px;">
+                        <div class="cardText">TV Show</div>
+                        <div class="cardText-secondary">2025 • Drama</div>
+                    </div>
+                </div>
+                <div class="card cardBox">
+                    <div class="cardImageContainer">
+                        <div style="padding-bottom: 150%; background: linear-gradient(135deg, #00ffff, #ff0080);"></div>
+                    </div>
+                    <div class="cardContent" style="padding: 10px;">
+                        <div class="cardText">Album</div>
+                        <div class="cardText-secondary">Artist Name</div>
+                    </div>
+                </div>
+                <div class="card cardBox">
+                    <div class="cardImageContainer">
+                        <div style="padding-bottom: 150%; background: linear-gradient(135deg, #b0ff00, #cc11f0);"></div>
+                    </div>
+                    <div class="cardContent" style="padding: 10px;">
+                        <div class="cardText">Collection</div>
+                        <div class="cardText-secondary">24 Items</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons Preview -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">BUTTONS</h2>
+            <div class="button-grid">
+                <button class="button-flat raised">Primary Button</button>
+                <button class="button-accent">Accent Button</button>
+                <button class="button-submit">Submit Button</button>
+                <button class="btnPlay itemAction textActionButton">▶ Play</button>
+                <button class="paper-icon-button-light">❤</button>
+                <button class="paper-icon-button-light">⭐</button>
+                <button class="paper-icon-button-light">➕</button>
+            </div>
+        </div>
+
+        <!-- Forms Preview -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">FORM ELEMENTS</h2>
+            <div class="form-grid">
+                <input type="text" class="emby-input" placeholder="Text Input">
+                <input type="password" class="emby-input" placeholder="Password Input">
+                <textarea class="emby-textarea" rows="4" placeholder="Textarea"></textarea>
+                <select class="emby-select">
+                    <option>Select Option 1</option>
+                    <option>Select Option 2</option>
+                    <option>Select Option 3</option>
+                </select>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="checkbox" class="emby-checkbox" id="check1">
+                    <label for="check1">Checkbox Option</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- List Items Preview -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">LIST ITEMS</h2>
+            <div>
+                <div class="listItem" style="padding: 15px; cursor: pointer;">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div class="listItemImage" style="width: 60px; height: 60px; background: linear-gradient(135deg, #00ffff, #ff0080);"></div>
+                        <div>
+                            <div class="cardText">List Item Title</div>
+                            <div class="cardText-secondary">Subtitle information</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="listItem" style="padding: 15px; cursor: pointer;">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div class="listItemImage" style="width: 60px; height: 60px; background: linear-gradient(135deg, #ff0080, #cc11f0);"></div>
+                        <div>
+                            <div class="cardText">Another List Item</div>
+                            <div class="cardText-secondary">More details here</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="listItem" style="padding: 15px; cursor: pointer;">
+                    <div style="display: flex; gap: 15px; align-items: center;">
+                        <div class="listItemImage" style="width: 60px; height: 60px; background: linear-gradient(135deg, #a020f0, #00ffff);"></div>
+                        <div>
+                            <div class="cardText">Third List Item</div>
+                            <div class="cardText-secondary">Additional info</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar Preview -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">PROGRESS BAR</h2>
+            <div style="position: relative; height: 4px; background: rgba(0, 255, 255, 0.2); border-radius: 2px; overflow: hidden;">
+                <div class="itemProgressBarForeground" style="width: 65%; height: 100%;"></div>
+            </div>
+        </div>
+
+        <!-- Indicators Preview -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">INDICATORS & BADGES</h2>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <div class="playedIndicator" style="width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">✓</div>
+                <div class="countIndicator" style="padding: 5px 10px; border-radius: 15px; font-size: 14px; font-weight: bold;">12</div>
+                <div style="display: flex; gap: 5px;">
+                    <span class="starIcon">⭐</span>
+                    <span class="starIcon">⭐</span>
+                    <span class="starIcon">⭐</span>
+                    <span class="starIcon">⭐</span>
+                    <span class="starIcon">⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="preview-section">
+            <h2 class="sectionTitle">COLOR PALETTE</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px;">
+                <div style="padding: 20px; background: var(--accent-cyan); color: #000; border-radius: 8px; text-align: center; font-weight: bold;">Cyan</div>
+                <div style="padding: 20px; background: var(--accent-magenta); color: #fff; border-radius: 8px; text-align: center; font-weight: bold;">Magenta</div>
+                <div style="padding: 20px; background: var(--accent-purple); color: #fff; border-radius: 8px; text-align: center; font-weight: bold;">Purple</div>
+                <div style="padding: 20px; background: var(--accent-green); color: #000; border-radius: 8px; text-align: center; font-weight: bold;">Green</div>
+                <div style="padding: 20px; background: var(--accent-yellow); color: #000; border-radius: 8px; text-align: center; font-weight: bold;">Yellow</div>
+                <div style="padding: 20px; background: var(--background-primary); color: #fff; border: 1px solid var(--accent-cyan); border-radius: 8px; text-align: center; font-weight: bold;">BG Primary</div>
+                <div style="padding: 20px; background: var(--background-secondary); color: #fff; border: 1px solid var(--accent-cyan); border-radius: 8px; text-align: center; font-weight: bold;">BG Secondary</div>
+                <div style="padding: 20px; background: var(--background-tertiary); color: #fff; border: 1px solid var(--accent-cyan); border-radius: 8px; text-align: center; font-weight: bold;">BG Tertiary</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mock Now Playing Bar -->
+    <div class="nowPlayingBar" style="position: fixed; bottom: 0; left: 0; right: 0; padding: 15px 20px;">
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00ffff, #ff0080); border-radius: 4px;"></div>
+            <div>
+                <div class="cardText">Now Playing Title</div>
+                <div class="cardText-secondary">Artist Name</div>
+            </div>
+            <div style="margin-left: auto; display: flex; gap: 10px;">
+                <button class="paper-icon-button-light">⏮</button>
+                <button class="paper-icon-button-light">▶</button>
+                <button class="paper-icon-button-light">⏭</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add logo CSS option
+        const logoLink = document.createElement('link');
+        logoLink.rel = 'stylesheet';
+        logoLink.href = 'dist/logo.css';
+
+        // Add variant selector
+        const variantSelector = document.createElement('div');
+        variantSelector.style.cssText = 'position: fixed; top: 80px; right: 20px; z-index: 10000; background: rgba(10, 10, 31, 0.95); padding: 15px; border: 1px solid var(--accent-cyan); border-radius: 8px; box-shadow: var(--glow-cyan);';
+        variantSelector.innerHTML = `
+            <div style="color: var(--accent-cyan); font-weight: bold; margin-bottom: 10px;">THEME OPTIONS</div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input type="checkbox" id="logo-toggle" style="cursor: pointer;">
+                    <span style="color: var(--text-primary);">Enable Logo CSS</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input type="checkbox" id="scanlines-toggle" style="cursor: pointer;">
+                    <span style="color: var(--text-primary);">Enable Scanlines</span>
+                </label>
+                <select id="variant-select" class="emby-select" style="margin-top: 10px;">
+                    <option value="">Default</option>
+                    <option value="purple-haze">Purple Haze</option>
+                    <option value="neon-nights">Neon Nights</option>
+                    <option value="tokyo-drift">Tokyo Drift</option>
+                </select>
+            </div>
+        `;
+        document.body.appendChild(variantSelector);
+
+        // Logo toggle
+        document.getElementById('logo-toggle').addEventListener('change', (e) => {
+            if (e.target.checked) {
+                document.head.appendChild(logoLink);
+            } else {
+                logoLink.remove();
+            }
+        });
+
+        // Scanlines toggle
+        const scanlinesLink = document.createElement('link');
+        scanlinesLink.rel = 'stylesheet';
+        scanlinesLink.href = 'dist/addons/scanlines.css';
+
+        document.getElementById('scanlines-toggle').addEventListener('change', (e) => {
+            if (e.target.checked) {
+                document.head.appendChild(scanlinesLink);
+            } else {
+                scanlinesLink.remove();
+            }
+        });
+
+        // Variant selector
+        let currentVariantLink = null;
+        document.getElementById('variant-select').addEventListener('change', (e) => {
+            if (currentVariantLink) {
+                currentVariantLink.remove();
+            }
+            if (e.target.value) {
+                currentVariantLink = document.createElement('link');
+                currentVariantLink.rel = 'stylesheet';
+                currentVariantLink.href = `dist/variants/${e.target.value}.css`;
+                document.head.appendChild(currentVariantLink);
+            }
+        });
+    </script>
+</body>
+</html>

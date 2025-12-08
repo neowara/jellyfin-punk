@@ -1,0 +1,79 @@
+/**
+ * Jellyfin-Punk Theme - Tokyo Drift Variant
+ * Magenta and pink dominant color scheme
+ * Version: 1.0.0
+ * Import this AFTER main.css to override colors
+ */
+
+:root {
+    /* Primary Colors */
+    --accent-cyan: #ff0080 !important;
+    --accent-cyan-dark: #d4006a !important;
+    --accent-magenta: #ff2e63 !important;
+    --accent-magenta-dark: #d42554 !important;
+    --accent-purple: #ff007a !important;
+    --accent-purple-dark: #d40065 !important;
+    --accent-green: #ff6b9d !important;
+    --accent-yellow: #ffa6c1 !important;
+
+    /* Background Colors with magenta tint */
+    --background-primary: #140007 !important;
+    --background-secondary: #1f000a !important;
+    --background-tertiary: #2e0a12 !important;
+    --background-elevated: #3a1a1f !important;
+
+    /* Text Colors with pink tint */
+    --text-primary: #fff0f5 !important;
+    --text-secondary: #f1b8d8 !important;
+    --text-tertiary: #d888a8 !important;
+    --text-muted: #985a78 !important;
+
+    /* Glow Effects */
+    --glow-cyan: 0 0 10px #ff0080, 0 0 20px #ff0080, 0 0 30px #ff2e63 !important;
+    --glow-magenta: 0 0 10px #ff2e63, 0 0 20px #ff007a, 0 0 30px #ff6b9d !important;
+    --glow-purple: 0 0 10px #ff007a, 0 0 20px #ff6b9d, 0 0 30px #ffa6c1 !important;
+}
+
+/* Additional magenta styling */
+.skinHeader {
+    border-bottom-color: #ff0080 !important;
+    box-shadow: 0 2px 20px rgba(255, 0, 128, 0.6) !important;
+}
+
+.card:hover,
+.cardBox:hover {
+    border-color: #ff0080 !important;
+    box-shadow: 0 0 10px #ff0080, 0 0 20px #ff2e63, 0 0 30px #ff007a, 0 4px 30px rgba(0, 0, 0, 0.7) !important;
+}
+
+.button-flat,
+.raised,
+.raisedButton {
+    background: linear-gradient(135deg, #ff0080 0%, #ff007a 100%) !important;
+    color: #ffffff !important;
+}
+
+.itemProgressBarForeground {
+    background: linear-gradient(90deg, #ff0080 0%, #ff6b9d 100%) !important;
+}
+
+.nowPlayingBar {
+    border-top-color: #ff2e63 !important;
+    box-shadow: 0 -2px 20px rgba(255, 46, 99, 0.5) !important;
+}
+
+.sectionTitle {
+    color: #ff0080 !important;
+    text-shadow: 0 0 20px #ff0080, 0 0 40px #ff2e63 !important;
+    border-bottom-color: #ff0080 !important;
+}
+
+.dialog,
+.actionsheet {
+    border-color: #ff0080 !important;
+    box-shadow: 0 0 10px #ff0080, 0 0 20px #ff2e63, 0 10px 50px rgba(0, 0, 0, 0.8) !important;
+}
+
+.dialogHeader {
+    background: linear-gradient(135deg, #ff0080 0%, #ff007a 100%) !important;
+}

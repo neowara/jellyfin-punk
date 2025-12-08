@@ -1,0 +1,62 @@
+/**
+ * Jellyfin-Punk Theme - Purple Haze Variant
+ * Purple and violet dominant color scheme
+ * Version: 1.0.0
+ * Import this AFTER main.css to override colors
+ */
+
+:root {
+    /* Primary Colors */
+    --accent-cyan: #a020f0 !important;
+    --accent-cyan-dark: #8000d0 !important;
+    --accent-magenta: #cc11f0 !important;
+    --accent-magenta-dark: #a00ec4 !important;
+    --accent-purple: #d946ef !important;
+    --accent-purple-dark: #b836d0 !important;
+    --accent-green: #e879f9 !important;
+    --accent-yellow: #f0abfc !important;
+
+    /* Background Colors with purple tint */
+    --background-primary: #0a0014 !important;
+    --background-secondary: #14001f !important;
+    --background-tertiary: #1e0a2e !important;
+    --background-elevated: #2a1a3a !important;
+
+    /* Text Colors with purple tint */
+    --text-primary: #f5f0ff !important;
+    --text-secondary: #d8b8f1 !important;
+    --text-tertiary: #b888d8 !important;
+    --text-muted: #7a5a98 !important;
+
+    /* Glow Effects */
+    --glow-cyan: 0 0 10px #a020f0, 0 0 20px #a020f0, 0 0 30px #cc11f0 !important;
+    --glow-magenta: 0 0 10px #cc11f0, 0 0 20px #cc11f0, 0 0 30px #d946ef !important;
+    --glow-purple: 0 0 10px #d946ef, 0 0 20px #d946ef, 0 0 30px #e879f9 !important;
+}
+
+/* Additional purple styling */
+.skinHeader {
+    border-bottom-color: #a020f0 !important;
+    box-shadow: 0 2px 20px rgba(160, 32, 240, 0.5) !important;
+}
+
+.card:hover,
+.cardBox:hover {
+    border-color: #cc11f0 !important;
+    box-shadow: 0 0 10px #a020f0, 0 0 20px #cc11f0, 0 0 30px #d946ef, 0 4px 30px rgba(0, 0, 0, 0.7) !important;
+}
+
+.button-flat,
+.raised,
+.raisedButton {
+    background: linear-gradient(135deg, #a020f0 0%, #d946ef 100%) !important;
+}
+
+.itemProgressBarForeground {
+    background: linear-gradient(90deg, #a020f0 0%, #cc11f0 100%) !important;
+}
+
+.nowPlayingBar {
+    border-top-color: #cc11f0 !important;
+    box-shadow: 0 -2px 20px rgba(204, 17, 240, 0.5) !important;
+}
