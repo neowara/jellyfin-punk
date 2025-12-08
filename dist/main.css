@@ -1,7 +1,7 @@
 /**
- * Jellyfin-Punk Theme - Refined Version
- * A CyberPunk-themed CSS customization for Jellyfin
- * Version: 1.1.0
+ * Jellyfin-Punk Theme - Refined Version 1.2
+ * A subtle CyberPunk-themed CSS customization for Jellyfin
+ * Version: 1.2.0
  * Author: Jellyfin-Punk Team
  * License: MIT
  */
@@ -10,85 +10,80 @@
    CSS VARIABLES
    ============================================ */
 :root {
-    /* Primary Colors - Slightly desaturated for better readability */
-    --accent-cyan: #00e5e5;
-    --accent-cyan-dark: #00b8b8;
-    --accent-magenta: #e6007a;
-    --accent-magenta-dark: #b8005f;
-    --accent-purple: #b810d9;
-    --accent-purple-dark: #9010b8;
-    --accent-green: #9fdd00;
-    --accent-yellow: #ffcc55;
+    /* Primary Colors - Muted for elegance */
+    --accent-cyan: #00d4d4;
+    --accent-cyan-dark: #009999;
+    --accent-magenta: #d6006e;
+    --accent-magenta-dark: #a60055;
+    --accent-purple: #a010c8;
+    --accent-purple-dark: #8010a0;
+    --accent-green: #88cc00;
+    --accent-yellow: #e6b84a;
 
     /* Background Colors */
-    --background-primary: #0a0a12;
-    --background-secondary: #0f0f1a;
-    --background-tertiary: #15152a;
-    --background-elevated: #1a1a35;
-    --background-card: #12121f;
+    --background-primary: #0b0b14;
+    --background-secondary: #10101c;
+    --background-tertiary: #16162a;
+    --background-elevated: #1c1c38;
+    --background-card: #13131e;
 
     /* Text Colors */
-    --text-primary: #f0f0f5;
-    --text-secondary: #b0b0c5;
-    --text-tertiary: #808095;
-    --text-muted: #606070;
+    --text-primary: #e8e8f0;
+    --text-secondary: #a8a8c0;
+    --text-tertiary: #787890;
+    --text-muted: #585870;
 
-    /* Subtle Glow Effects */
-    --glow-subtle: 0 0 8px rgba(0, 229, 229, 0.3);
-    --glow-medium: 0 0 12px rgba(0, 229, 229, 0.4), 0 0 20px rgba(0, 229, 229, 0.2);
-    --glow-strong: 0 0 15px rgba(0, 229, 229, 0.5), 0 0 25px rgba(0, 229, 229, 0.3);
+    /* Very Subtle Glow Effects */
+    --glow-subtle: 0 0 6px rgba(0, 212, 212, 0.2);
+    --glow-medium: 0 0 10px rgba(0, 212, 212, 0.25);
 
     /* Border Radius */
     --border-radius-sm: 4px;
     --border-radius-md: 6px;
-    --border-radius-lg: 10px;
+    --border-radius-lg: 8px;
 
     /* Transitions */
     --transition-fast: 0.2s ease-in-out;
     --transition-normal: 0.3s ease-in-out;
-    --transition-slow: 0.5s ease-in-out;
 }
 
 /* ============================================
    GLOBAL STYLES
    ============================================ */
 
-/* Main Background */
 body {
     background: var(--background-primary) !important;
     color: var(--text-primary) !important;
 }
 
-/* Background Container */
 .backgroundContainer {
     background: var(--background-primary) !important;
 }
 
-/* Page Content Backdrop */
 .backdropImage {
-    opacity: 0.12 !important;
-    filter: saturate(1.3) brightness(0.7) blur(8px) !important;
+    opacity: 0.1 !important;
+    filter: saturate(1.2) brightness(0.6) blur(10px) !important;
 }
 
 /* ============================================
    CARDS & CONTENT
    ============================================ */
 
-/* Card Styling - More subtle */
+/* Card Styling - Very subtle */
 .card,
 .cardBox {
     background: var(--background-card) !important;
-    border: 1px solid rgba(0, 229, 229, 0.15) !important;
+    border: 1px solid rgba(0, 212, 212, 0.1) !important;
     border-radius: var(--border-radius-md) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
     transition: all var(--transition-normal) !important;
 }
 
 .card:hover,
 .cardBox:hover {
-    border-color: rgba(0, 229, 229, 0.5) !important;
-    box-shadow: var(--glow-subtle), 0 4px 20px rgba(0, 0, 0, 0.6) !important;
-    transform: translateY(-3px) !important;
+    border-color: rgba(0, 212, 212, 0.3) !important;
+    box-shadow: 0 0 8px rgba(0, 212, 212, 0.15), 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+    transform: translateY(-2px) !important;
 }
 
 /* Card Content */
@@ -96,7 +91,6 @@ body {
     background: transparent !important;
 }
 
-/* Card Text */
 .cardText {
     color: var(--text-primary) !important;
     text-shadow: none !important;
@@ -106,88 +100,37 @@ body {
     color: var(--text-secondary) !important;
 }
 
-/* Item Details */
-.itemDetailPage {
-    background: var(--background-primary) !important;
+/* Card Overlays - TONE DOWN those bright labels */
+.cardImageContainer .cardScalable .cardPadder {
+    background-color: transparent !important;
 }
 
-.itemDetailImage {
-    border: 1px solid rgba(0, 229, 229, 0.3) !important;
-    border-radius: var(--border-radius-lg) !important;
-    box-shadow: var(--glow-subtle) !important;
+/* Card Type Labels (Anime, Movies, etc.) - Make them MUCH more subtle */
+.cardIndicators {
+    opacity: 0.7 !important;
 }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
-
-/* Primary Button - Gradient but more subtle */
-.button-flat,
-.raised,
-.raisedButton {
-    background: linear-gradient(135deg, rgba(0, 229, 229, 0.2) 0%, rgba(184, 16, 217, 0.2) 100%) !important;
+.cardIndicator {
+    background: rgba(0, 212, 212, 0.15) !important;
     color: var(--accent-cyan) !important;
-    border: 1px solid rgba(0, 229, 229, 0.4) !important;
-    border-radius: var(--border-radius-md) !important;
-    font-weight: 600 !important;
-    transition: all var(--transition-normal) !important;
-    box-shadow: none !important;
+    border: 1px solid rgba(0, 212, 212, 0.3) !important;
+    backdrop-filter: blur(8px) !important;
+    font-size: 11px !important;
+    padding: 3px 8px !important;
+    border-radius: 4px !important;
 }
 
-.button-flat:hover,
-.raised:hover,
-.raisedButton:hover {
-    background: linear-gradient(135deg, rgba(0, 229, 229, 0.3) 0%, rgba(184, 16, 217, 0.3) 100%) !important;
-    border-color: var(--accent-cyan) !important;
-    box-shadow: var(--glow-subtle) !important;
-    transform: translateY(-1px) !important;
+/* Media Type Tags on Cards */
+.cardOverlayInner {
+    background: rgba(11, 11, 20, 0.85) !important;
+    backdrop-filter: blur(10px) !important;
 }
 
-/* Accent Button */
-.button-accent {
-    background: linear-gradient(135deg, rgba(230, 0, 122, 0.2) 0%, rgba(184, 16, 217, 0.2) 100%) !important;
-    border: 1px solid rgba(230, 0, 122, 0.4) !important;
-    color: var(--accent-magenta) !important;
-}
-
-.button-accent:hover {
-    background: linear-gradient(135deg, rgba(230, 0, 122, 0.3) 0%, rgba(184, 16, 217, 0.3) 100%) !important;
-    box-shadow: 0 0 8px rgba(230, 0, 122, 0.3) !important;
-}
-
-/* Submit Button */
-.button-submit {
-    background: linear-gradient(135deg, rgba(0, 229, 229, 0.25) 0%, rgba(159, 221, 0, 0.25) 100%) !important;
-    border: 1px solid rgba(0, 229, 229, 0.5) !important;
+.cardOverlayButton-hover,
+.cardOverlayButton {
+    background: rgba(0, 212, 212, 0.1) !important;
     color: var(--accent-cyan) !important;
-}
-
-/* Play Button - More prominent but not overwhelming */
-.itemAction.textActionButton,
-.btnPlay {
-    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-magenta) 100%) !important;
-    border: none !important;
-    color: #000 !important;
-    font-weight: 700 !important;
-    box-shadow: 0 2px 10px rgba(0, 229, 229, 0.3) !important;
-}
-
-.itemAction.textActionButton:hover,
-.btnPlay:hover {
-    box-shadow: var(--glow-medium) !important;
-    transform: scale(1.05) !important;
-}
-
-/* Icon Buttons */
-.paper-icon-button-light {
-    background: rgba(0, 229, 229, 0.08) !important;
-    color: var(--accent-cyan) !important;
-    transition: all var(--transition-fast) !important;
-}
-
-.paper-icon-button-light:hover {
-    background: rgba(0, 229, 229, 0.15) !important;
-    color: var(--accent-cyan) !important;
+    border: 1px solid rgba(0, 212, 212, 0.25) !important;
 }
 
 /* ============================================
@@ -196,71 +139,121 @@ body {
 
 /* Top Navigation Bar */
 .skinHeader {
-    background: rgba(10, 10, 18, 0.95) !important;
-    border-bottom: 1px solid rgba(0, 229, 229, 0.2) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
-    backdrop-filter: blur(10px) !important;
+    background: rgba(11, 11, 20, 0.95) !important;
+    border-bottom: 1px solid rgba(0, 212, 212, 0.15) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
 }
 
-/* Header Buttons */
+/* Header Buttons - Less bright */
 .headerButton,
 .headerHomeButton {
-    color: var(--accent-cyan) !important;
+    color: var(--text-secondary) !important;
     transition: all var(--transition-fast) !important;
 }
 
 .headerButton:hover,
 .headerHomeButton:hover {
-    color: var(--text-primary) !important;
-    text-shadow: var(--glow-subtle) !important;
+    color: var(--accent-cyan) !important;
 }
 
-/* Side Navigation Drawer */
-.mainDrawer-scrollContainer,
-.navMenuOption {
-    background: rgba(10, 10, 18, 0.98) !important;
-    border-right: 1px solid rgba(0, 229, 229, 0.15) !important;
+/* Section Titles - MUCH more subtle */
+.sectionTitle {
+    color: rgba(0, 212, 212, 0.9) !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    text-shadow: none !important;
+    border-bottom: 1px solid rgba(0, 212, 212, 0.15) !important;
+    padding-bottom: 8px !important;
+    font-size: 18px !important;
+}
+
+/* Side Navigation */
+.mainDrawer-scrollContainer {
+    background: rgba(11, 11, 20, 0.98) !important;
+    border-right: 1px solid rgba(0, 212, 212, 0.1) !important;
 }
 
 .navMenuOption {
     color: var(--text-secondary) !important;
+    background: transparent !important;
     transition: all var(--transition-fast) !important;
 }
 
 .navMenuOption:hover {
-    background: rgba(0, 229, 229, 0.08) !important;
+    background: rgba(0, 212, 212, 0.05) !important;
     color: var(--accent-cyan) !important;
-    border-left: 2px solid var(--accent-cyan) !important;
+    border-left: 2px solid rgba(0, 212, 212, 0.5) !important;
 }
 
 .navMenuOption-selected {
-    background: linear-gradient(90deg, rgba(0, 229, 229, 0.15) 0%, transparent 100%) !important;
+    background: rgba(0, 212, 212, 0.08) !important;
     color: var(--accent-cyan) !important;
     border-left: 3px solid var(--accent-cyan) !important;
 }
 
-/* Section Titles - More subtle glow */
-.sectionTitle {
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+/* Primary Buttons - Very subtle */
+.button-flat,
+.raised,
+.raisedButton {
+    background: rgba(0, 212, 212, 0.12) !important;
     color: var(--accent-cyan) !important;
-    text-transform: uppercase !important;
+    border: 1px solid rgba(0, 212, 212, 0.3) !important;
+    border-radius: var(--border-radius-md) !important;
+    font-weight: 600 !important;
+    transition: all var(--transition-normal) !important;
+}
+
+.button-flat:hover,
+.raised:hover,
+.raisedButton:hover {
+    background: rgba(0, 212, 212, 0.2) !important;
+    border-color: var(--accent-cyan) !important;
+    box-shadow: 0 0 8px rgba(0, 212, 212, 0.2) !important;
+}
+
+/* Play Button */
+.itemAction.textActionButton,
+.btnPlay {
+    background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-purple) 100%) !important;
+    border: none !important;
+    color: #000 !important;
     font-weight: 700 !important;
-    letter-spacing: 1.5px !important;
-    text-shadow: 0 0 10px rgba(0, 229, 229, 0.3) !important;
-    border-bottom: 1px solid rgba(0, 229, 229, 0.2) !important;
-    padding-bottom: 8px !important;
+}
+
+.itemAction.textActionButton:hover,
+.btnPlay:hover {
+    box-shadow: 0 0 10px rgba(0, 212, 212, 0.3) !important;
+    transform: scale(1.03) !important;
+}
+
+/* Icon Buttons */
+.paper-icon-button-light {
+    background: rgba(0, 212, 212, 0.06) !important;
+    color: var(--text-secondary) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.paper-icon-button-light:hover {
+    background: rgba(0, 212, 212, 0.12) !important;
+    color: var(--accent-cyan) !important;
 }
 
 /* ============================================
    FORMS & INPUTS
    ============================================ */
 
-/* Input Fields */
 .emby-input,
 .emby-textarea,
 .emby-select {
-    background: rgba(15, 15, 26, 0.9) !important;
+    background: rgba(16, 16, 28, 0.9) !important;
     color: var(--text-primary) !important;
-    border: 1px solid rgba(0, 229, 229, 0.2) !important;
+    border: 1px solid rgba(0, 212, 212, 0.15) !important;
     border-radius: var(--border-radius-md) !important;
     transition: all var(--transition-normal) !important;
 }
@@ -269,89 +262,17 @@ body {
 .emby-textarea:focus,
 .emby-select:focus {
     border-color: var(--accent-cyan) !important;
-    box-shadow: 0 0 8px rgba(0, 229, 229, 0.3) !important;
+    box-shadow: 0 0 6px rgba(0, 212, 212, 0.2) !important;
     outline: none !important;
 }
 
-/* Checkboxes */
 .emby-checkbox:checked + span + .checkboxOutline {
     background: var(--accent-cyan) !important;
     border-color: var(--accent-cyan) !important;
 }
 
-/* Toggle Switch */
 .toggleButton-emby-checked {
     background: var(--accent-cyan) !important;
-    box-shadow: 0 0 8px rgba(0, 229, 229, 0.3) !important;
-}
-
-/* ============================================
-   MEDIA PLAYER
-   ============================================ */
-
-/* Video OSD */
-.videoOsdBottom {
-    background: linear-gradient(to top, rgba(10, 10, 18, 0.95) 0%, transparent 100%) !important;
-}
-
-/* Progress Bar */
-.itemProgressBar {
-    background: rgba(0, 229, 229, 0.15) !important;
-}
-
-.itemProgressBarForeground {
-    background: linear-gradient(90deg, var(--accent-cyan) 0%, var(--accent-purple) 100%) !important;
-    box-shadow: 0 0 8px rgba(0, 229, 229, 0.4) !important;
-}
-
-/* Now Playing Bar */
-.nowPlayingBar {
-    background: rgba(10, 10, 18, 0.95) !important;
-    border-top: 1px solid rgba(230, 0, 122, 0.3) !important;
-    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.5) !important;
-    backdrop-filter: blur(10px) !important;
-}
-
-/* ============================================
-   DIALOGS & MODALS
-   ============================================ */
-
-/* Dialog Container */
-.dialog,
-.actionsheet {
-    background: rgba(15, 15, 26, 0.98) !important;
-    border: 1px solid rgba(0, 229, 229, 0.3) !important;
-    border-radius: var(--border-radius-lg) !important;
-    box-shadow: var(--glow-medium), 0 10px 40px rgba(0, 0, 0, 0.8) !important;
-    backdrop-filter: blur(20px) !important;
-}
-
-.dialogHeader {
-    background: linear-gradient(135deg, rgba(0, 229, 229, 0.2) 0%, rgba(184, 16, 217, 0.2) 100%) !important;
-    color: var(--accent-cyan) !important;
-    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0 !important;
-    border-bottom: 1px solid rgba(0, 229, 229, 0.3) !important;
-}
-
-/* ============================================
-   LISTS & TABLES
-   ============================================ */
-
-/* List Items */
-.listItem {
-    background: rgba(15, 15, 26, 0.4) !important;
-    border-bottom: 1px solid rgba(0, 229, 229, 0.08) !important;
-    transition: all var(--transition-fast) !important;
-}
-
-.listItem:hover {
-    background: rgba(0, 229, 229, 0.08) !important;
-    border-left: 2px solid var(--accent-cyan) !important;
-}
-
-.listItemImage {
-    border: 1px solid rgba(0, 229, 229, 0.2) !important;
-    border-radius: var(--border-radius-sm) !important;
 }
 
 /* ============================================
@@ -361,29 +282,95 @@ body {
 /* Played Indicator */
 .playedIndicator {
     background: var(--accent-green) !important;
-    box-shadow: 0 0 8px rgba(159, 221, 0, 0.4) !important;
+    box-shadow: 0 0 6px rgba(136, 204, 0, 0.3) !important;
 }
 
-/* Unplayed Count - Less harsh pink */
+/* Unplayed Count - Make it MUCH less harsh */
 .countIndicator {
-    background: rgba(230, 0, 122, 0.9) !important;
+    background: rgba(214, 0, 110, 0.75) !important;
     color: #fff !important;
-    border: 1px solid rgba(230, 0, 122, 0.5) !important;
-    box-shadow: 0 0 8px rgba(230, 0, 122, 0.3) !important;
-    font-weight: 700 !important;
+    border: 1px solid rgba(214, 0, 110, 0.4) !important;
+    box-shadow: 0 0 6px rgba(214, 0, 110, 0.2) !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
 }
 
-/* Rating */
+/* Rating Stars */
 .starIcon {
     color: var(--accent-yellow) !important;
-    filter: drop-shadow(0 0 3px rgba(255, 204, 85, 0.3)) !important;
+    filter: none !important;
+}
+
+/* Progress Bar */
+.itemProgressBar {
+    background: rgba(0, 212, 212, 0.12) !important;
+    height: 3px !important;
+}
+
+.itemProgressBarForeground {
+    background: var(--accent-cyan) !important;
+    box-shadow: 0 0 6px rgba(0, 212, 212, 0.3) !important;
+}
+
+/* ============================================
+   MEDIA PLAYER
+   ============================================ */
+
+.videoOsdBottom {
+    background: linear-gradient(to top, rgba(11, 11, 20, 0.95) 0%, transparent 100%) !important;
+}
+
+.nowPlayingBar {
+    background: rgba(11, 11, 20, 0.95) !important;
+    border-top: 1px solid rgba(0, 212, 212, 0.2) !important;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+/* ============================================
+   DIALOGS & MODALS
+   ============================================ */
+
+.dialog,
+.actionsheet {
+    background: rgba(16, 16, 28, 0.98) !important;
+    border: 1px solid rgba(0, 212, 212, 0.2) !important;
+    border-radius: var(--border-radius-lg) !important;
+    box-shadow: 0 0 10px rgba(0, 212, 212, 0.15), 0 10px 40px rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.dialogHeader {
+    background: rgba(0, 212, 212, 0.1) !important;
+    color: var(--accent-cyan) !important;
+    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0 !important;
+    border-bottom: 1px solid rgba(0, 212, 212, 0.2) !important;
+}
+
+/* ============================================
+   LISTS & TABLES
+   ============================================ */
+
+.listItem {
+    background: rgba(16, 16, 28, 0.3) !important;
+    border-bottom: 1px solid rgba(0, 212, 212, 0.06) !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.listItem:hover {
+    background: rgba(0, 212, 212, 0.06) !important;
+    border-left: 2px solid rgba(0, 212, 212, 0.5) !important;
+}
+
+.listItemImage {
+    border: 1px solid rgba(0, 212, 212, 0.15) !important;
+    border-radius: var(--border-radius-sm) !important;
 }
 
 /* ============================================
    SCROLLBARS
    ============================================ */
 
-/* Webkit Scrollbar */
 ::-webkit-scrollbar {
     width: 10px !important;
     height: 10px !important;
@@ -394,79 +381,57 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, rgba(0, 229, 229, 0.5) 0%, rgba(184, 16, 217, 0.5) 100%) !important;
+    background: rgba(0, 212, 212, 0.3) !important;
     border-radius: var(--border-radius-sm) !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, rgba(0, 229, 229, 0.7) 0%, rgba(184, 16, 217, 0.7) 100%) !important;
+    background: rgba(0, 212, 212, 0.5) !important;
 }
 
-/* Firefox Scrollbar */
 * {
     scrollbar-width: thin !important;
-    scrollbar-color: rgba(0, 229, 229, 0.5) var(--background-secondary) !important;
-}
-
-/* ============================================
-   LIBRARY & COLLECTIONS
-   ============================================ */
-
-/* Library Tiles */
-.cardOverlayButton {
-    background: rgba(10, 10, 18, 0.9) !important;
-    border: 1px solid rgba(0, 229, 229, 0.3) !important;
-    transition: all var(--transition-normal) !important;
-}
-
-.cardOverlayButton:hover {
-    background: rgba(0, 229, 229, 0.15) !important;
-    box-shadow: var(--glow-subtle) !important;
+    scrollbar-color: rgba(0, 212, 212, 0.3) var(--background-secondary) !important;
 }
 
 /* ============================================
    DASHBOARD/ADMIN
    ============================================ */
 
-/* Dashboard Cards */
 .paperList {
-    background: rgba(15, 15, 26, 0.8) !important;
-    border: 1px solid rgba(0, 229, 229, 0.15) !important;
+    background: rgba(16, 16, 28, 0.7) !important;
+    border: 1px solid rgba(0, 212, 212, 0.1) !important;
     border-radius: var(--border-radius-md) !important;
 }
 
-/* Dashboard Buttons */
 .dashboardTileLink {
     background: var(--background-card) !important;
-    border: 1px solid rgba(0, 229, 229, 0.2) !important;
+    border: 1px solid rgba(0, 212, 212, 0.15) !important;
     border-radius: var(--border-radius-md) !important;
     transition: all var(--transition-normal) !important;
 }
 
 .dashboardTileLink:hover {
-    border-color: var(--accent-cyan) !important;
-    box-shadow: var(--glow-subtle) !important;
-    transform: translateY(-2px) !important;
+    border-color: rgba(0, 212, 212, 0.4) !important;
+    box-shadow: 0 0 8px rgba(0, 212, 212, 0.15) !important;
 }
 
 /* ============================================
    MISC ELEMENTS
    ============================================ */
 
-/* Search Bar */
 .searchInput {
-    background: rgba(15, 15, 26, 0.95) !important;
-    border: 1px solid rgba(0, 229, 229, 0.25) !important;
+    background: rgba(16, 16, 28, 0.95) !important;
+    border: 1px solid rgba(0, 212, 212, 0.2) !important;
     border-radius: var(--border-radius-lg) !important;
     color: var(--text-primary) !important;
 }
 
 .searchInput:focus {
-    box-shadow: 0 0 10px rgba(0, 229, 229, 0.3) !important;
+    box-shadow: 0 0 8px rgba(0, 212, 212, 0.2) !important;
     border-color: var(--accent-cyan) !important;
 }
 
-/* Tabs */
 .emby-tab-button {
     color: var(--text-secondary) !important;
     transition: all var(--transition-fast) !important;
@@ -479,22 +444,23 @@ body {
 .emby-tab-button-active {
     color: var(--accent-cyan) !important;
     border-bottom: 2px solid var(--accent-cyan) !important;
-    box-shadow: 0 2px 8px rgba(0, 229, 229, 0.3) !important;
 }
 
-/* Context Menu */
 .actionSheetMenuItem {
     color: var(--text-primary) !important;
     transition: all var(--transition-fast) !important;
 }
 
 .actionSheetMenuItem:hover {
-    background: rgba(0, 229, 229, 0.1) !important;
+    background: rgba(0, 212, 212, 0.08) !important;
     color: var(--accent-cyan) !important;
 }
 
-/* Cast Icon */
 .headerCastButton {
+    color: var(--text-secondary) !important;
+}
+
+.headerCastButton:hover {
     color: var(--accent-cyan) !important;
 }
 
@@ -503,33 +469,66 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE TWEAKS
+   SPECIFIC JELLYFIN ELEMENTS
    ============================================ */
 
-/* Mobile Optimizations */
+/* Home Sections */
+.section0,
+.section1,
+.section2,
+.section3 {
+    margin-bottom: 2em !important;
+}
+
+/* Library Tiles - Tone down labels */
+.cardScalable {
+    position: relative !important;
+}
+
+/* Image Tags */
+.imageTag {
+    background: rgba(0, 212, 212, 0.15) !important;
+    color: var(--accent-cyan) !important;
+    border: 1px solid rgba(0, 212, 212, 0.25) !important;
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+}
+
+/* Media Info */
+.mediaInfoItems {
+    color: var(--text-secondary) !important;
+}
+
+/* Item Detail */
+.itemDetailPage {
+    background: var(--background-primary) !important;
+}
+
+.detailImageContainer {
+    border: 1px solid rgba(0, 212, 212, 0.2) !important;
+    border-radius: var(--border-radius-lg) !important;
+}
+
+/* ============================================
+   RESPONSIVE & ACCESSIBILITY
+   ============================================ */
+
 @media (max-width: 768px) {
     .card:hover,
     .cardBox:hover {
         transform: none !important;
     }
 
-    /* Reduce glow effects on mobile */
     .sectionTitle {
-        text-shadow: none !important;
+        font-size: 16px !important;
     }
 }
 
-/* ============================================
-   ACCESSIBILITY
-   ============================================ */
-
-/* Focus Indicators */
 *:focus-visible {
     outline: 2px solid var(--accent-cyan) !important;
     outline-offset: 2px !important;
 }
 
-/* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
