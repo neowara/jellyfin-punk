@@ -1,6 +1,6 @@
 {
   "name": "jellyfin-punk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A high-quality CyberPunk-themed CSS customization for Jellyfin with neon aesthetics and modern UI/UX design",
   "main": "dist/main.css",
   "style": "dist/main.css",

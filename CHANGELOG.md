@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-12-08
+
+### Changed
+- **Major visual refinement** - Significantly improved theme appearance
+- Reduced border brightness from 0.3 to 0.15 opacity for subtle appearance
+- Desaturated accent colors for better readability (#00ffff → #00e5e5, #ff0080 → #e6007a)
+- Softened glow effects with new subtle, medium, and strong glow variables
+- Improved card backgrounds with dedicated `--background-card` color
+- Reduced text shadows on section titles for cleaner look
+- Changed buttons from solid gradients to semi-transparent overlays with borders
+- Toned down badge colors from harsh pink to softer magenta (0.9 opacity)
+- Made borders and accents much more subtle throughout the UI
+
+### Fixed
+- Cards no longer have harsh, bright cyan borders
+- Badges (unplayed counts) are now less overwhelming
+- Text contrast improved for better readability
+- Overall theme is more balanced and easier on the eyes
+- Reduced visual noise while maintaining cyberpunk aesthetic
+
 ## [1.0.0] - 2025-12-08
 
 ### Added
