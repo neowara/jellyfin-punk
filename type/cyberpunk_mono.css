@@ -1,0 +1,220 @@
+/*Jellyfin-Punk: Monochrome CyberPunk Theme*/
+/*Minimalist black and white with subtle cyan accents*/
+:root {--accent: 200, 200, 200;} /* Light Gray #c8c8c8 */
+:root {--indicator: 0, 204, 204;} /* Subtle Cyan #00cccc */
+:root {--selection: 200, 200, 200;}
+
+.transcodingProgress > div, .itemProgressBarForeground {
+    background-color: rgba(200, 200, 200, 0.3);
+}
+.playbackProgress > div {
+    background-color: rgba(200, 200, 200, 0.75);
+}
+.backgroundContainer.withBackdrop {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*Dashboard theming*/
+#user_usage_report_table,
+.detailTable {
+    background: rgba(0,0,0,.5);
+}
+.detailTableBodyRow-shaded {
+    background: #0000 !important;
+}
+
+.infoBanner {
+    background: #0a0a0a;
+}
+.navMenuOptionText {
+    margin-top: 0;
+}
+.backgroundProgress > div {
+    background-color: #0000;
+}
+
+.visualCardBox, .cardImageContainer {
+  box-shadow: none;
+}
+
+.mdl-switch__input:checked + .mdl-switch__label + .mdl-switch__trackContainer > .mdl-switch__track {
+    background: rgba(200, 200, 200, 0.6);
+}
+.mdl-switch__input:checked + .mdl-switch__label + .mdl-switch__trackContainer > .mdl-switch__thumb {
+    background: rgb(200, 200, 200);
+}
+
+.dashboardSection h3 {
+  margin-left: 0.5em;
+}
+.sessionCardFooter {
+  border: none;
+}
+.paperList,
+.visualCardBox {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.listItem-border {
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+fieldset {
+  border: 1px solid rgba(200, 200, 200, 0.2);
+  border-radius: 0.4em;
+}
+
+/*Title page styling*/
+.layout-desktop .detailRibbon {
+  background: rgba(0,0,0,.2) !important;
+}
+.itemBackdrop::after {
+  background: rgba(0,0,0,.5) !important;
+}
+
+/*Footer and hover effects*/
+.appfooter {
+	background: rgba(0,0,0,0.9);
+}
+.button-flat:hover {
+	background: rgba(200, 200, 200, 0.15);
+	color: rgba(200, 200, 200) !important;
+}
+
+/*Progress bar theming*/
+progress {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(200, 200, 200, 0.22);
+}
+progress::-webkit-progress-bar {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 0px solid rgba(200, 200, 200, 0.22);
+}
+progress::-moz-progress-bar {
+  background-color: rgba(200, 200, 200, 0.75);
+}
+progress::-webkit-progress-value {
+  background-color: rgba(200, 200, 200, 0.75);
+}
+#divRunningTasks span {
+  color: rgba(200, 200, 200, 0.75) !important;
+}
+.taskProgressOuter {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border: 1px solid rgba(200, 200, 200, 0.22);
+}
+.taskProgressInner {
+  background: rgba(200, 200, 200, 0.75) !important;
+}
+#scheduledTasksPage span {
+  color: rgba(0, 204, 204, 0.75) !important;
+}
+
+/*Login background*/
+#loginPage {
+  background: url(https://i.imgur.com/9vL4iNf.png) !important;
+  background-size: cover !important;
+}
+
+/*Indicators - use cyan for watched*/
+.innerCardFooter,
+.countIndicator,
+.playedIndicator {
+  background: rgba(0,0,0,0.4);
+  box-shadow: none;
+}
+.countIndicator {
+  box-shadow: none;
+  border: 1px solid rgba(0, 204, 204, 0.5);
+}
+
+/*Subtitle settings*/
+.subtitleappearance-preview {
+  background: linear-gradient(140deg, #444, #0a0a0a) !important;
+}
+
+/*Blurhash styling - desaturate for monochrome look*/
+.blurhash-canvas {
+	filter: opacity(60%) saturate(10%);
+}
+
+/*Navigation and UI elements*/
+.navMenuOption-selected, .selectionCommandsPanel {
+    background: rgba(200, 200, 200, 0.2) !important;
+}
+.mainDrawer {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.raised,
+.fab,
+a[data-role="button"] {
+  background: rgba(20, 20, 20, 0.8) !important;
+	transition: all 0.2s !important;
+}
+.raised:hover,
+.fab:hover,
+.navMenuOption:hover,
+.actionSheetMenuItem:hover {
+  background: rgba(200, 200, 200, 0.2) !important;
+}
+.paper-icon-button-light:hover {
+  background-color: rgba(0, 204, 204, 0.1) !important;
+}
+
+.paper-icon-button-light:hover,
+.raised.homeLibraryButton:hover,
+.button-flat:hover,
+.playstatebutton-icon-played,
+.ratingbutton-icon-withrating,
+.paper-icon-button-light:hover:not(:disabled),
+.emby-tab-button:hover,
+.selectLabelFocused,
+.inputLabelFocused,
+.textareaLabelFocused,
+.buttonActive,
+.button-link{
+  color: rgba(200, 200, 200) !important;
+}
+
+/*Syncplay theming with cyan accent*/
+.syncPlayIconCircle {
+  color: rgba(0, 204, 204, 1) !important;
+  text-shadow: none !important;
+}
+
+/*Loading spinner - monochrome*/
+.mdl-spinner__layer-1 {border-color: rgba(255, 255, 255, 1);}
+.mdl-spinner__layer-2 {border-color: rgba(200, 200, 200, 1);}
+.mdl-spinner__layer-3 {border-color: rgba(128, 128, 128, 1);}
+.mdl-spinner__layer-4 {border-color: rgba(64, 64, 64, 1);}
+
+/*Scrollbar styling*/
+::-webkit-scrollbar-track-piece {
+  background-color: #0000;
+}
+::-webkit-scrollbar-corner {
+  background-color: #0000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 200, 200, 0.4) !important;
+  border-radius: var(--rounding);
+}
+
+* {
+  scrollbar-color: rgba(200, 200, 200, 0.4) #0000 !important;
+}
+
+/*Card backgrounds - true black and dark grays*/
+.defaultCardBackground1 {
+	background-color: #000000;
+}
+.defaultCardBackground2 {
+	background-color: #0a0a0a;
+}
+.defaultCardBackground3 {
+	background-color: #141414;
+}
+.defaultCardBackground4 {
+	background-color: #1f1f1f;
+}
+.defaultCardBackground5 {
+	background-color: #2a2a2a;
+}

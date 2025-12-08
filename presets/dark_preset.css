@@ -1,0 +1,15 @@
+/*Jellyfin-Punk Dark Preset - Deep Purple & Magenta*/
+/*Darker, more intense cyberpunk with rich purple tones*/
+
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fixes.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/base.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/accentlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_dark.css');
+
+/*Subtle rounding for modern cyberpunk feel*/
+:root {--rounding: 4px;}
+
+/*Style backdrop - more blur and deeper darkness*/
+.backdropImage {
+  filter: blur(20px) saturate(120%) contrast(115%) brightness(30%);
+}

@@ -1,9 +1,7 @@
 {
   "name": "jellyfin-punk",
-  "version": "1.3.0",
-  "description": "A high-quality CyberPunk-themed CSS customization for Jellyfin with neon aesthetics and modern UI/UX design",
-  "main": "dist/main.css",
-  "style": "dist/main.css",
+  "version": "2.0.0",
+  "description": "A minimal CyberPunk-themed CSS customization for Jellyfin built on Ultrachromic. Three variants: Blue & Yellow, Dark Purple & Magenta, Monochrome with Cyan.",
   "repository": {
     "type": "git",
     "url": "https://github.com/neowara/jellyfin-punk.git"
@@ -13,7 +11,8 @@
     "theme",
     "css",
     "cyberpunk",
-    "neon",
+    "ultrachromic",
+    "modular",
     "dark-theme",
     "ui",
     "skin",
@@ -27,16 +26,19 @@
   },
   "homepage": "https://github.com/neowara/jellyfin-punk#readme",
   "files": [
-    "dist/**/*",
-    "src/**/*",
+    "base.css",
+    "accentlist.css",
+    "fixes.css",
+    "type/**/*",
+    "presets/**/*",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "echo 'CSS files are pre-built in dist/'",
+    "build": "echo 'CSS files are modular and ready to use'",
     "test": "echo 'No tests configured yet'"
   },
   "devDependencies": {},
-  "dependencies": {},
-  "jsdelivr": "dist/"
+  "dependencies": {}
 }

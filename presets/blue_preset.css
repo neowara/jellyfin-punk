@@ -1,0 +1,15 @@
+/*Jellyfin-Punk Blue Preset - Electric Blue & Neon Yellow*/
+/*Classic cyberpunk aesthetic inspired by Blade Runner*/
+
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fixes.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/base.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/accentlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_blue.css');
+
+/*Subtle rounding for modern cyberpunk feel*/
+:root {--rounding: 4px;}
+
+/*Style backdrop - subtle blur and darkening*/
+.backdropImage {
+  filter: blur(18px) saturate(110%) contrast(110%) brightness(35%);
+}

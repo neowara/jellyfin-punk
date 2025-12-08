@@ -1,0 +1,15 @@
+/*Jellyfin-Punk Mono Preset - Black & White with Cyan*/
+/*Minimalist cyberpunk with monochrome palette and subtle cyan accents*/
+
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/fixes.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/base.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/accentlist.css');
+@import url('https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk/type/cyberpunk_mono.css');
+
+/*Subtle rounding for modern cyberpunk feel*/
+:root {--rounding: 4px;}
+
+/*Style backdrop - minimal blur, desaturated*/
+.backdropImage {
+  filter: blur(16px) saturate(20%) contrast(105%) brightness(35%);
+}

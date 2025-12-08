@@ -1,0 +1,220 @@
+/*Jellyfin-Punk: Dark Purple CyberPunk Theme*/
+/*Darker, more intense cyberpunk with deep purple and magenta*/
+:root {--accent: 139, 0, 255;} /* Deep Purple #8b00ff */
+:root {--indicator: 230, 0, 122;} /* Hot Pink/Magenta #e6007a */
+:root {--selection: 139, 0, 255;}
+
+.transcodingProgress > div, .itemProgressBarForeground {
+    background-color: rgba(139, 0, 255, 0.3);
+}
+.playbackProgress > div {
+    background-color: rgba(139, 0, 255, 0.75);
+}
+.backgroundContainer.withBackdrop {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*Dashboard theming with darker background*/
+#user_usage_report_table,
+.detailTable {
+    background: rgba(0,0,0,.7);
+}
+.detailTableBodyRow-shaded {
+    background: #0000 !important;
+}
+
+.infoBanner {
+    background: #0a0015;
+}
+.navMenuOptionText {
+    margin-top: 0;
+}
+.backgroundProgress > div {
+    background-color: #0000;
+}
+
+.visualCardBox, .cardImageContainer {
+  box-shadow: none;
+}
+
+.mdl-switch__input:checked + .mdl-switch__label + .mdl-switch__trackContainer > .mdl-switch__track {
+    background: rgba(139, 0, 255, 0.6);
+}
+.mdl-switch__input:checked + .mdl-switch__label + .mdl-switch__trackContainer > .mdl-switch__thumb {
+    background: rgb(139, 0, 255);
+}
+
+.dashboardSection h3 {
+  margin-left: 0.5em;
+}
+.sessionCardFooter {
+  border: none;
+}
+.paperList,
+.visualCardBox {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.listItem-border {
+  border-color: rgba(255, 255, 255, 0) !important;
+}
+fieldset {
+  border: 1px solid rgba(139, 0, 255, 0.3);
+  border-radius: 0.4em;
+}
+
+/*Title page styling*/
+.layout-desktop .detailRibbon {
+  background: rgba(0,0,0,.3) !important;
+}
+.itemBackdrop::after {
+  background: rgba(0,0,0,.6) !important;
+}
+
+/*Footer and hover effects*/
+.appfooter {
+	background: rgba(0,0,0,0.95);
+}
+.button-flat:hover {
+	background: rgba(139, 0, 255, 0.25);
+	color: rgba(139, 0, 255) !important;
+}
+
+/*Progress bar theming*/
+progress {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(139, 0, 255, 0.3);
+}
+progress::-webkit-progress-bar {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 0px solid rgba(139, 0, 255, 0.3);
+}
+progress::-moz-progress-bar {
+  background-color: rgba(139, 0, 255, 0.75);
+}
+progress::-webkit-progress-value {
+  background-color: rgba(139, 0, 255, 0.75);
+}
+#divRunningTasks span {
+  color: rgba(139, 0, 255, 0.75) !important;
+}
+.taskProgressOuter {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(139, 0, 255, 0.3);
+}
+.taskProgressInner {
+  background: rgba(139, 0, 255, 0.75) !important;
+}
+#scheduledTasksPage span {
+  color: rgba(230, 0, 122, 0.75) !important;
+}
+
+/*Login background*/
+#loginPage {
+  background: url(https://i.imgur.com/9vL4iNf.png) !important;
+  background-size: cover !important;
+}
+
+/*Indicators - use magenta for watched*/
+.innerCardFooter,
+.countIndicator,
+.playedIndicator {
+  background: rgba(0,0,0,0.5);
+  box-shadow: none;
+}
+.countIndicator {
+  box-shadow: none;
+  border: 1px solid rgba(230, 0, 122, 0.5);
+}
+
+/*Subtitle settings*/
+.subtitleappearance-preview {
+  background: linear-gradient(140deg, rgb(139, 0, 255), #0a0015) !important;
+}
+
+/*Blurhash styling*/
+.blurhash-canvas {
+	filter: opacity(50%) saturate(70%);
+}
+
+/*Navigation and UI elements*/
+.navMenuOption-selected, .selectionCommandsPanel {
+    background: rgba(139, 0, 255, 0.3) !important;
+}
+.mainDrawer {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.raised,
+.fab,
+a[data-role="button"] {
+  background: rgba(10, 0, 21, 0.8) !important;
+	transition: all 0.2s !important;
+}
+.raised:hover,
+.fab:hover,
+.navMenuOption:hover,
+.actionSheetMenuItem:hover {
+  background: rgba(139, 0, 255, 0.3) !important;
+}
+.paper-icon-button-light:hover {
+  background-color: rgba(139, 0, 255, 0.2) !important;
+}
+
+.paper-icon-button-light:hover,
+.raised.homeLibraryButton:hover,
+.button-flat:hover,
+.playstatebutton-icon-played,
+.ratingbutton-icon-withrating,
+.paper-icon-button-light:hover:not(:disabled),
+.emby-tab-button:hover,
+.selectLabelFocused,
+.inputLabelFocused,
+.textareaLabelFocused,
+.buttonActive,
+.button-link{
+  color: rgba(139, 0, 255) !important;
+}
+
+/*Syncplay theming*/
+.syncPlayIconCircle {
+  color: rgba(139, 0, 255, 1) !important;
+  text-shadow: none !important;
+}
+
+/*Loading spinner colors*/
+.mdl-spinner__layer-1 {border-color: rgba(139, 0, 255, 1);}
+.mdl-spinner__layer-2 {border-color: rgba(230, 0, 122, 1);}
+.mdl-spinner__layer-3 {border-color: rgba(139, 0, 255, 0.6);}
+.mdl-spinner__layer-4 {border-color: rgba(230, 0, 122, 0.6);}
+
+/*Scrollbar styling*/
+::-webkit-scrollbar-track-piece {
+  background-color: #0000;
+}
+::-webkit-scrollbar-corner {
+  background-color: #0000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 0, 255, 0.6) !important;
+  border-radius: var(--rounding);
+}
+
+* {
+  scrollbar-color: rgba(139, 0, 255, 0.6) #0000 !important;
+}
+
+/*Card backgrounds - darker than blue variant*/
+.defaultCardBackground1 {
+	background-color: #05000a;
+}
+.defaultCardBackground2 {
+	background-color: #0a0015;
+}
+.defaultCardBackground3 {
+	background-color: #0f0020;
+}
+.defaultCardBackground4 {
+	background-color: #14002a;
+}
+.defaultCardBackground5 {
+	background-color: #1a0035;
+}
