@@ -5,6 +5,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-12-08
+
+### Changed - COMPLETE REWRITE
+- **Stripped down to minimal, clean design** - Fixed all UI-breaking issues
+- Removed ALL text glows and shadows
+- Cards now transparent by default, border only on hover
+- Removed all backdrop filters and overlays that blocked images
+- Single clean border on hover instead of multiple stacked borders
+- Removed card shadows that made images dark
+- Simplified all styling to not break Jellyfin's default UI
+- Clean, subtle cyberpunk accent color (#00cccc) without overwhelming effects
+- No more weird borders or misaligned elements
+
+### Fixed
+- **Images now fully visible** - removed all filters and overlays
+- **No more text glow** - clean, readable text throughout
+- **Single border on hover** - no more stacked border effects
+- **Icons properly aligned** - removed custom positioning
+- **Clean card styling** - images no longer blacked out
+- Theme now enhances instead of breaking the UI
+
 ## [1.1.0] - 2025-12-08
 
 ### Changed
