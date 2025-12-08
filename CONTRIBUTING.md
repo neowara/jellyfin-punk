@@ -26,7 +26,7 @@ Thank you for your interest in contributing to Jellyfin-Punk! This document prov
 
 2. **Clone your fork**:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/jellyfin-punk.git
+   git clone https://github.com/neowara/jellyfin-punk.git
    cd jellyfin-punk
    ```
 

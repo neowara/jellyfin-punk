@@ -33,7 +33,7 @@ Jellyfin-Punk requires:
 2. **Copy and paste the following line:**
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
 ```
 
 3. **Click Save** - The theme will apply immediately server-wide!
@@ -44,14 +44,14 @@ Jellyfin-Punk requires:
 Add neon glow effects to media logos:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/logo.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/logo.css");
 ```
 
 #### Enable Scanline Effect
 Add retro CRT scanline overlay:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/addons/scanlines.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/addons/scanlines.css");
 ```
 
 #### Color Variants
@@ -60,17 +60,17 @@ Choose from alternative color schemes:
 
 **Purple Haze** (Purple/Violet dominant):
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/variants/purple-haze.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/variants/purple-haze.css");
 ```
 
 **Neon Nights** (Cyan/Blue dominant):
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/variants/neon-nights.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/variants/neon-nights.css");
 ```
 
 **Tokyo Drift** (Magenta/Pink dominant):
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/variants/tokyo-drift.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/variants/tokyo-drift.css");
 ```
 
 ## 🎨 Color Palette
@@ -92,7 +92,7 @@ The default theme uses the following color scheme:
 You can customize the theme by overriding CSS variables. Add this after the main import:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
 
 :root {
     --accent-cyan: #00ffff;

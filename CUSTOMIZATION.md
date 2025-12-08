@@ -17,7 +17,7 @@ This guide provides detailed instructions for customizing the Jellyfin-Punk them
 Add this after your theme import to override specific colors:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
 
 :root {
     /* Primary accent colors */

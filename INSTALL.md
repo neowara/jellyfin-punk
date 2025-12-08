@@ -32,7 +32,7 @@ This is the easiest method and ensures you always have access to updates.
 4. Copy and paste the following code:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
 ```
 
 5. Click **Save**
@@ -47,7 +47,7 @@ If you fork this repository and enable GitHub Pages:
 3. Use the following import in Custom CSS:
 
 ```css
-@import url("https://YOUR-USERNAME.github.io/jellyfin-punk/dist/main.css");
+@import url("https://neowara.github.io/jellyfin-punk/dist/main.css");
 ```
 
 ### Method 3: Local Installation
@@ -66,20 +66,20 @@ For offline or development use:
 ### Basic Setup (Core Theme Only)
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
 ```
 
 ### Full Setup (With All Features)
 
 ```css
 /* Main theme */
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
 
 /* Logo enhancements */
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/logo.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/logo.css");
 
 /* Scanline effect */
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/addons/scanlines.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/addons/scanlines.css");
 ```
 
 ### Color Variants
@@ -88,20 +88,20 @@ Choose ONE of the following variants (optional):
 
 #### Purple Haze (Purple/Violet theme)
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/variants/purple-haze.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/variants/purple-haze.css");
 ```
 
 #### Neon Nights (Cyan/Blue theme)
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/variants/neon-nights.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/variants/neon-nights.css");
 ```
 
 #### Tokyo Drift (Magenta/Pink theme)
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/variants/tokyo-drift.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/variants/tokyo-drift.css");
 ```
 
 ### Custom Color Configuration
@@ -109,7 +109,7 @@ Choose ONE of the following variants (optional):
 You can override specific colors by adding this AFTER the imports:
 
 ```css
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@main/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@main/dist/main.css");
 
 /* Custom color overrides */
 :root {
@@ -224,7 +224,7 @@ To prevent automatic updates, pin to a specific version:
 
 ```css
 /* Instead of @main, use a specific version tag */
-@import url("https://cdn.jsdelivr.net/gh/YOUR-USERNAME/jellyfin-punk@v1.0.0/dist/main.css");
+@import url("https://cdn.jsdelivr.net/gh/neowara/jellyfin-punk@v1.0.0/dist/main.css");
 ```
 
 Replace `v1.0.0` with the desired version number.
@@ -262,7 +262,7 @@ If you encounter issues not covered here:
 - [Jellyfin Documentation](https://jellyfin.org/docs/)
 - [CSS Customization Guide](https://jellyfin.org/docs/general/clients/css-customization/)
 - [Jellyfin Forums](https://forum.jellyfin.org/)
-- [Project GitHub](https://github.com/YOUR-USERNAME/jellyfin-punk)
+- [Project GitHub](https://github.com/neowara/jellyfin-punk)
 
 ---
 
