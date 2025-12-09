@@ -1,8 +1,24 @@
 /*Cyberpunk Font - Orbitron from Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
 
-* {
+/*Apply Orbitron font but exclude icon fonts*/
+body,
+h1, h2, h3, h4, h5, h6,
+p, span, div, a, button, input, textarea, select,
+.emby-button, .navMenuOption, .listItem {
     font-family: 'Orbitron', sans-serif !important;
+}
+
+/*Exclude material icons and emby icons from font override*/
+.material-icons,
+.md-icon,
+.emby-icon,
+[class*="mdl-"],
+[class*="material-"],
+.fab,
+.fa,
+.glyphicon {
+    font-family: 'Material Icons', 'Material Icons Outlined', 'Noto Sans Symbols', 'Segoe UI Symbol' !important;
 }
 
 /*Make text more cyberpunk with letter spacing*/

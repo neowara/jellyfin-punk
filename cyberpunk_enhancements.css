@@ -1,11 +1,11 @@
-/*Jellyfin-Punk Cyberpunk Enhancements - Aggressive Styling*/
+/*Jellyfin-Punk Cyberpunk Enhancements - Refined Styling*/
 
-/*Glowing borders on cards*/
-.card:hover .cardBox {
+/*Glowing borders on card images only*/
+.card:hover .cardImage,
+.card:hover .cardImageContainer {
     border: 2px solid rgba(var(--accent), 0.8) !important;
-    box-shadow: 0 0 20px rgba(var(--accent), 0.6),
-                0 0 40px rgba(var(--accent), 0.4),
-                inset 0 0 20px rgba(var(--accent), 0.1) !important;
+    box-shadow: 0 0 15px rgba(var(--accent), 0.5),
+                0 0 25px rgba(var(--accent), 0.3) !important;
     transition: all 0.3s ease !important;
 }
 
@@ -17,56 +17,47 @@
         transparent 100%) !important;
 }
 
-/*Section titles with glow*/
+/*Section titles with subtle glow*/
 .sectionTitle {
     color: rgba(var(--accent)) !important;
-    text-shadow: 0 0 10px rgba(var(--accent), 0.8),
-                 0 0 20px rgba(var(--accent), 0.6),
-                 0 0 30px rgba(var(--accent), 0.4) !important;
+    text-shadow: 0 0 8px rgba(var(--accent), 0.5) !important;
 }
 
-/*Buttons with accent colors*/
-.button-flat,
-.raised,
-.fab,
-.emby-button {
-    background: linear-gradient(135deg,
-        rgba(var(--accent), 0.3) 0%,
-        rgba(var(--accent), 0.1) 100%) !important;
-    border: 1px solid rgba(var(--accent), 0.5) !important;
-    transition: all 0.3s ease !important;
-}
-
+/*Buttons with subtle accent on hover only (no borders on top menu)*/
 .button-flat:hover,
 .raised:hover,
 .fab:hover,
 .emby-button:hover {
     background: linear-gradient(135deg,
-        rgba(var(--accent), 0.6) 0%,
-        rgba(var(--accent), 0.3) 100%) !important;
-    border: 1px solid rgba(var(--accent), 1) !important;
-    box-shadow: 0 0 15px rgba(var(--accent), 0.6) !important;
+        rgba(var(--accent), 0.3) 0%,
+        rgba(var(--accent), 0.15) 100%) !important;
+    box-shadow: 0 0 10px rgba(var(--accent), 0.3) !important;
 }
 
-/*Popup menus with cyberpunk styling*/
+/*Popup menus with subtle cyberpunk styling*/
 .actionSheetContent,
-.dialog,
+.dialog {
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.95) 0%,
+        rgba(var(--accent), 0.15) 100%) !important;
+    border: 1px solid rgba(var(--accent), 0.4) !important;
+    box-shadow: 0 0 20px rgba(var(--accent), 0.3) !important;
+}
+
 .toast {
     background: linear-gradient(135deg,
         rgba(0, 0, 0, 0.95) 0%,
-        rgba(var(--accent), 0.2) 100%) !important;
-    border: 2px solid rgba(var(--accent), 0.6) !important;
-    box-shadow: 0 0 30px rgba(var(--accent), 0.5),
-                0 0 60px rgba(var(--accent), 0.3) !important;
+        rgba(var(--accent), 0.15) 100%) !important;
+    border: 1px solid rgba(var(--accent), 0.4) !important;
 }
 
 .actionSheetMenuItem {
-    border-bottom: 1px solid rgba(var(--accent), 0.2) !important;
+    border-bottom: 1px solid rgba(var(--accent), 0.15) !important;
 }
 
 .actionSheetMenuItem:hover {
-    background: rgba(var(--accent), 0.3) !important;
-    border-left: 3px solid rgba(var(--accent), 1) !important;
+    background: rgba(var(--accent), 0.2) !important;
+    border-left: 3px solid rgba(var(--accent), 0.8) !important;
 }
 
 /*Navigation drawer with accent*/
@@ -116,13 +107,13 @@
     box-shadow: 0 0 20px rgba(var(--accent), 0.6) !important;
 }
 
-/*Top bar with gradient*/
+/*Top bar with subtle gradient*/
 .skinHeader {
     background: linear-gradient(to right,
         rgba(0, 0, 0, 0.9) 0%,
-        rgba(var(--accent), 0.2) 50%,
+        rgba(var(--accent), 0.1) 50%,
         rgba(0, 0, 0, 0.9) 100%) !important;
-    border-bottom: 2px solid rgba(var(--accent), 0.5) !important;
+    border-bottom: 1px solid rgba(var(--accent), 0.3) !important;
 }
 
 /*Indicators with accent glow*/
@@ -130,8 +121,8 @@
 .playedIndicator,
 .countIndicator {
     background: rgba(var(--indicator), 0.9) !important;
-    border: 2px solid rgba(var(--indicator), 1) !important;
-    box-shadow: 0 0 10px rgba(var(--indicator), 0.8) !important;
+    border: 1px solid rgba(var(--indicator), 1) !important;
+    box-shadow: 0 0 8px rgba(var(--indicator), 0.6) !important;
     font-weight: bold !important;
 }
 
@@ -185,7 +176,7 @@
 .emby-tab-button.show-focus:focus {
     border-bottom: 3px solid rgba(var(--accent), 1) !important;
     color: rgba(var(--accent)) !important;
-    text-shadow: 0 0 10px rgba(var(--accent), 0.8) !important;
+    text-shadow: 0 0 6px rgba(var(--accent), 0.5) !important;
 }
 
 /*Checkbox with accent*/
@@ -207,19 +198,19 @@
 .searchResults {
     background: linear-gradient(135deg,
         rgba(0, 0, 0, 0.95) 0%,
-        rgba(var(--accent), 0.15) 100%) !important;
-    border: 2px solid rgba(var(--accent), 0.5) !important;
-    box-shadow: 0 0 30px rgba(var(--accent), 0.4) !important;
+        rgba(var(--accent), 0.1) 100%) !important;
+    border: 1px solid rgba(var(--accent), 0.4) !important;
+    box-shadow: 0 0 20px rgba(var(--accent), 0.3) !important;
 }
 
-/*Media info with accent highlights*/
-.mediaInfoText,
+/*Media info text - keep readable*/
 .secondaryText {
-    color: rgba(var(--accent), 0.8) !important;
+    opacity: 0.9 !important;
 }
 
-/*Cast/Crew cards with borders*/
-.personCard:hover .cardBox {
+/*Cast/Crew cards with borders on images only*/
+.personCard:hover .cardImage,
+.personCard:hover .cardImageContainer {
     border: 2px solid rgba(var(--indicator), 0.8) !important;
-    box-shadow: 0 0 15px rgba(var(--indicator), 0.6) !important;
+    box-shadow: 0 0 12px rgba(var(--indicator), 0.5) !important;
 }
